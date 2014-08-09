@@ -1,0 +1,191 @@
+html, body {
+	color: #888;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1 { font-family: 'Cinzel', 'Open Sans', Tahoma, sans-serif;}
+
+section, h2 { clear: both; }
+
+.header {
+	height: 70px;
+	background: #0066CC;
+	color: white;
+	width: 100%;
+}
+
+.header h1 {
+	position: absolute;
+	left: 50%;
+	padding-top: 15px;
+	margin: 0 0 0 -500px;
+}
+
+#content {
+	background: #fff;
+	margin-bottom: 200px;
+	overflow: hidden;
+}
+
+
+
+
+.choose-key {
+	height: 250px;
+	padding-top: 50px;
+	background: #eee;
+	text-align: center;
+}
+
+.choose-key h2, .choose-key h1 { 
+	margin: 0 0 25px; 
+}
+
+.choose-key ul { 
+	padding: 0;
+}
+
+.choose-key ul li {
+	list-style: none;
+	display: inline-block;
+	margin-left: 20px;
+	font-size: 36px;
+	background: #c3c3c3;
+	height: 60px;
+	width: 60px;
+	border-radius: 30px;
+	padding-top: 2px;
+	cursor: pointer;
+}
+
+.choose-key ul li:hover,
+.choose-key.fixed ul li:hover {
+	background-color: #888;
+	color: #fff;
+}
+
+.choose-key ul .active, 
+.choose-key ul .active:hover,
+.choose-key.fixed ul .active, 
+.choose-key.fixed ul .active:hover  
+{ 
+	background: red;
+	color: #fff; 
+}
+
+.fixed {
+	position: fixed;
+	top: 0;
+	height: 50px;
+	padding-top: 5px;
+	background: #fff;
+	width: 100%;
+	box-shadow: 2px 2px 5px #cecece;
+	text-align: center;
+}
+
+.choose-key.fixed h2, .choose-key.fixed ul { 
+	display: inline-block;
+}
+
+.choose-key.fixed h2 { 
+	margin-right: 20px; 
+	font-size: 23px;
+	padding-top: 7px; 
+}
+
+.choose-key.fixed ul li {
+	height: 30px;
+	width: 30px;
+	font-size: 17px;
+	padding-top: 0;
+	background-color: #fff;
+	border: 2px solid #c3c3c3;
+}
+
+
+
+.space-holder {
+	display: none;
+	height: 250px;
+}
+
+
+/*results*/
+
+.result {
+	margin-bottom: 100px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.result h2 { 
+	text-align: center;
+	margin: 100px 0 20px; 
+}
+
+.result .position, 
+.result .notes,
+.result .maj-pent-pos,
+.result .min-pent-pos,
+.result .triad-position
+{
+	text-align: center;
+	padding: 0;
+}
+
+.result .position li, 
+.result .notes li, 
+.result .maj-pent-pos li, 
+.result .min-pent-pos li,
+.result .triad-position li {
+	list-style: none;
+	display: inline-block;
+	width: 80px;
+	margin-left: 10px;
+}
+
+.result .notes li { 
+	font-size: 45px;
+	height: 80px;
+	background: #fff;
+	border-radius: 40px;
+	padding-top: 3px;
+	margin-left: 10px;
+	border: 1px solid #c3c3c3;
+}
+
+.choose-key ul li:first-child, 
+.result .position li:first-child,
+.result .notes li:first-child,
+.result .maj-pent-pos li:first-child, 
+.result .min-pent-pos li:first-child, 
+.result .triad-position li:first-child
+ { margin-left: 0; }
+ 
+ 
+ 
+ 
+ /* Footer */
+ 
+ footer {
+ 	position: fixed;
+ 	bottom: 0;
+ 	height: 200px;
+ 	z-index: -1;
+ 	width: 100%;
+ 	background-color: #000;
+ 	text-align: center;
+	
+	h1 {
+	 	color: #fff;
+	 	padding-top: 65px;
+	 	margin-top: 0;
+	}
+ }
+
+ footer h1 {
+ 	color: #fff;
+ 	padding-top: 65px;
+ 	margin-top: 0;
+ }
