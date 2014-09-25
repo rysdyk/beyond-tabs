@@ -1,3 +1,5 @@
+// All our data
+
 music = ["e", "f", "f#", "g", "g#", "a", "a#", "b", "c", "c#", "d", "d#"];
 
 musicFlat = ["e", "f", "gb", "g", "ab", "a", "bb", "b", "c", "db", "d", "eb"];
@@ -9,6 +11,14 @@ triad_position = ["root", "3rd", "5th"];
 maj_pent_pos = [ "root", "2nd", "3rd", "5th", "6th"];
 
 min_pent_pos = [ "root", "3rd", "4th", "5th", "7th"];
+
+maj_chords = ['major', 'minor', 'minor', 'major', 'major', 'minor', 'diminished'];
+
+min_chords = ['minor', 'diminished', 'major', 'minor', 'minor', 'major', 'major'];
+
+
+
+// initial settings
 
 for(i=0; i<music.length; i++) {
 	$('.keys').append("<li>" + music[i] + "</li>");
@@ -30,6 +40,9 @@ for(i=0; i<triad_position.length; i++) {
 	$('.triad-position').append("<li>" + triad_position[i] + "</li>");
 }
 
+
+
+// functions for setting things
 
 function majorScale(x)
 { 
@@ -101,6 +114,7 @@ function harmonicMinorScale(x)
 	if ( x == "b") har_min_notes[1] = "c#";
 	if ( x == "b") har_min_notes[4] = "f#";
 	if ( x == "b") har_min_notes[6] = "a#";
+	
 	return har_min_notes; 
 }
 
@@ -126,6 +140,10 @@ function minorPentatonic(x)
 	return min_pentatonic;
 }
 
+
+
+// chaning everything when choosing a key
+
 $('.choose-key ul li').click( function(){
 	
 	$('.major-notes li').remove();
@@ -148,7 +166,7 @@ $('.choose-key ul li').click( function(){
 	
 	maj_pent_results = majorPentatonic(key)
 	for (i=0; i<maj_pent_results.length; i++) {
-		$('.major-pent-notes').append("<li>" + maj_pent_results[i] + "</li>")
+		$('.major-pent-notes').append("<li>" + maj_pent_results[i] + "</li>");
 	}
 	
 	natural_minor_results = naturalMinorScale(key);
@@ -179,30 +197,22 @@ $('.choose-key ul li').click( function(){
 })
 
 
+
+// Menu Animation
+
 $(window).scroll( function(){
 	if ( $(this).scrollTop() > 320 ){
-		$('.choose-key').addClass('fixed').fadeIn();
-		$('.space-holder').show();
+		
+		if ( $('.choose-key').hasClass('fixed')){
+			return;
+		}
+		else {
+			$('.choose-key').hide().addClass('fixed').fadeIn();
+			$('.space-holder').show();
+		}
 	} else {
 		$('.choose-key').removeClass('fixed');
 		$('.space-holder').hide();
 	}
 })
 
-
-// $(document).scroll( function(){
-// 	var top = $(document).scrollTop();
-//
-// 	if ( top == 321 )
-// 	{
-// 		$('.choose-key').hide();
-// 		$('.space-holder').show();
-// 		$('.choose-key').addClass("fixed").fadeIn('slow');
-//
-// 	}
-// 	else if (top == 320)
-// 	{
-// 		$('.choose-key').removeClass('fixed');
-// 		$('.space-holder').hide();
-// 	}
-// })
