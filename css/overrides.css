@@ -195,3 +195,18 @@ section, h2 { clear: both; }
  	padding-top: 65px;
  	margin-top: 0;
  }
+ 
+ footer nav {
+	 display: block;
+	 margin: 0 0 10px;
+ }
+ 
+ footer nav a {
+	 text-decoration: none;
+	 margin: 0 10px;
+	 color: #fff;
+ }
+ 
+ footer nav a:hover {
+	 color: red;
+ }
