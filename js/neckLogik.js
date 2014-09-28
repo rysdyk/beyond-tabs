@@ -43,42 +43,72 @@ for(i=0; i<triad_position.length; i++) {
 
 
 // functions for setting things
+// x is the musical key
 
 function majorScale(x)
 { 
 	index = music.indexOf(x);
-	a = music[index];
-	b = music[(index+2) % 12];
-	c = music[(index+4) % 12];
-	d = music[(index+5) % 12];
-	e = music[(index+7) % 12];
-	f = music[(index+9) % 12];
-	g = music[(index+11) % 12];
-	h = music[(index+12) % 12];
-	maj_notes = [ a, b, c, d, e, f, g, h];
+	
+	intervals = [0, 2, 4, 5, 7, 9, 11, 12];
+	
+	pos = [];
+	
+	for (i=0; i<intervals.length; i++ ) 
+	{
+		pos[i] = music[(index+intervals[i]) % 12];
+	}
+	
+	maj_notes = [];
+	
+	for ( i=0; i<8; i++) 
+	{
+		maj_notes.push(pos[i]);
+	}
+	
 	if ( x == "f") maj_notes[3] = "bb";
+	
 	return maj_notes;
 }
 
 function majorTriad(x)
 {
 	index = music.indexOf(x);
-	a = music[index];
-	b = music[(index+4) % 12];
-	c = music[(index+7) % 12];
-	maj_triad = [ a, b, c];
+	
+	intervals = [0, 4, 7];
+	
+	for (i=0; i<intervals.length; i++ ) 
+	{
+		pos[i] = music[(index+intervals[i]) % 12];
+	}
+	
+	maj_triad = [];
+	
+	for ( i=0; i<3; i++) 
+	{
+		maj_triad.push(pos[i]);
+	}
+
 	return maj_triad;
 }
 
 function majorPentatonic(x)
 {
 	index = music.indexOf(x);
-	a = music[index];
-	b = music[(index+2) % 12];
-	c = music[(index+4) % 12];
-	d = music[(index+7) % 12];
-	e = music[(index+9) % 12];
-	maj_pent = [ a, b, c, d, e];
+	
+	intervals = [0, 2, 4, 7, 9];
+	
+	for (i=0; i<intervals.length; i++ ) 
+	{
+		pos[i] = music[(index+intervals[i]) % 12];
+	}
+	
+	maj_pent = [];
+	
+	for ( i=0; i<3; i++) 
+	{
+		maj_pent.push(pos[i]);
+	}
+	
 	return maj_pent;
 }
 
@@ -86,30 +116,46 @@ function majorPentatonic(x)
 function naturalMinorScale(x)
 { 
 	index = musicFlat.indexOf(x);
-	a = musicFlat[index];
-	b = musicFlat[(index+2) % 12];
-	c = musicFlat[(index+3) % 12];
-	d = musicFlat[(index+5) % 12];
-	e = musicFlat[(index+7) % 12];
-	f = musicFlat[(index+8) % 12];
-	g = musicFlat[(index+10) % 12];
-	h = musicFlat[(index+12) % 12];
-	nat_min_notes = [ a, b, c, d, e, f, g, h];
+	
+	intervals = [ 0, 2, 3, 5, 7, 8, 10, 12];
+	
+	pos = [];
+	
+	for (i=0; i<intervals.length; i++ ) 
+	{
+		pos[i] = musicFlat[(index+intervals[i]) % 12];
+	}
+	
+	nat_min_notes = [];
+	
+	for ( i=0; i<8; i++) 
+	{
+		nat_min_notes.push(pos[i]);
+	}
+
 	return nat_min_notes; 
 }
 
 function harmonicMinorScale(x)
 { 
 	index = musicFlat.indexOf(x);
-	a = musicFlat[index];
-	b = musicFlat[(index+2) % 12];
-	c = musicFlat[(index+3) % 12];
-	d = musicFlat[(index+5) % 12];
-	e = musicFlat[(index+7) % 12];
-	f = musicFlat[(index+8) % 12];
-	g = musicFlat[(index+11) % 12];
-	h = musicFlat[(index+12) % 12];
-	har_min_notes = [ a, b, c, d, e, f, g, h];
+	
+	intervals = [ 0, 2, 3, 5, 7, 8, 11, 12];
+	
+	pos = [];
+	
+	for (i=0; i<intervals.length; i++ ) 
+	{
+		pos[i] = musicFlat[(index+intervals[i]) % 12];
+	}
+	
+	har_min_notes = [];
+	
+	for ( i=0; i<8; i++) 
+	{
+		har_min_notes.push(pos[i]);
+	}
+	
 	if ( x == "a") har_min_notes[6] = "g#";
 	if ( x == "b") har_min_notes[1] = "c#";
 	if ( x == "b") har_min_notes[4] = "f#";
@@ -121,22 +167,46 @@ function harmonicMinorScale(x)
 function minorTriad(x)
 {
 	index = musicFlat.indexOf(x);
-	a = musicFlat[index];
-	b = musicFlat[(index+3) % 12];
-	c = musicFlat[(index+7) % 12];
-	min_triad = [ a, b, c];
+	
+	intervals = [ 0, 3, 7];
+	
+	pos = [];
+	
+	for (i=0; i<intervals.length; i++ ) 
+	{
+		pos[i] = musicFlat[(index+intervals[i]) % 12];
+	}
+	
+	min_triad = [];
+	
+	for ( i=0; i<3; i++) 
+	{
+		min_triad.push(pos[i]);
+	}
+	
 	return min_triad;
 }
 
 function minorPentatonic(x)
 {
 	index = musicFlat.indexOf(x);
-	a = musicFlat[index];
-	b = musicFlat[(index+3) % 12];
-	c = musicFlat[(index+5) % 12];
-	d = musicFlat[(index+7) % 12];
-	e = musicFlat[(index+10) % 12];
-	min_pentatonic = [ a, b, c, d, e];
+	
+	intervals = [ 0, 3, 5, 7, 10];
+	
+	pos = [];
+	
+	for (i=0; i<intervals.length; i++ ) 
+	{
+		pos[i] = musicFlat[(index+intervals[i]) % 12];
+	}
+	
+	min_pentatonic = [];
+	
+	for ( i=0; i<5; i++) 
+	{
+		min_pentatonic.push(pos[i]);
+	}
+
 	return min_pentatonic;
 }
 
