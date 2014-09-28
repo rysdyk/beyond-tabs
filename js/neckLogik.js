@@ -104,7 +104,7 @@ function majorPentatonic(x)
 	
 	maj_pent = [];
 	
-	for ( i=0; i<3; i++) 
+	for ( i=0; i<5; i++) 
 	{
 		maj_pent.push(pos[i]);
 	}
