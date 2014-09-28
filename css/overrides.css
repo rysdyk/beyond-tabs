@@ -133,7 +133,9 @@ section, h2 { clear: both; }
 .result .notes,
 .result .maj-pent-pos,
 .result .min-pent-pos,
-.result .triad-position
+.result .triad-position,
+.result .maj-chords,
+.result .min-chords
 {
 	text-align: center;
 	padding: 0;
@@ -143,7 +145,9 @@ section, h2 { clear: both; }
 .result .notes li, 
 .result .maj-pent-pos li, 
 .result .min-pent-pos li,
-.result .triad-position li {
+.result .triad-position li,
+.result .min-chords li,
+.result .maj-chords li {
 	list-style: none;
 	display: inline-block;
 	width: 80px;
@@ -166,7 +170,9 @@ section, h2 { clear: both; }
 .result .notes li:first-child,
 .result .maj-pent-pos li:first-child, 
 .result .min-pent-pos li:first-child, 
-.result .triad-position li:first-child
+.result .triad-position li:first-child,
+.result .maj-chords li:first-child,
+.result .min-chords li:first-child
  { margin-left: 0; }
  
  

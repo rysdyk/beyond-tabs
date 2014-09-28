@@ -20,24 +20,39 @@ min_chords = ['minor', 'diminished', 'major', 'minor', 'minor', 'major', 'major'
 
 // initial settings
 
-for(i=0; i<music.length; i++) {
+for (i=0; i<music.length; i++)
+{
 	$('.keys').append("<li>" + music[i] + "</li>");
 }
 
-for(i=0; i<position.length; i++) {
+for (i=0; i<position.length; i++)
+{
 	$('.position').append("<li>" + position[i] + "</li>");
 }
 
-for(i=0; i<maj_pent_pos.length; i++) {
+for (i=0; i<maj_pent_pos.length; i++)
+{
 	$('.maj-pent-pos').append("<li>" + maj_pent_pos[i] + "</li>");
 }
 
-for(i=0; i<min_pent_pos.length; i++) {
+for (i=0; i<min_pent_pos.length; i++)
+{
 	$('.min-pent-pos').append("<li>" + min_pent_pos[i] + "</li>");
 }
 
-for(i=0; i<triad_position.length; i++) {
+for (i=0; i<triad_position.length; i++)
+{
 	$('.triad-position').append("<li>" + triad_position[i] + "</li>");
+}
+
+for (i=0; i<maj_chords.length; i++)
+{
+	$('.maj-chords').append("<li>" + maj_chords[i] + "</li>");
+}
+
+for (i=0; i<min_chords.length; i++)
+{
+	$('.min-chords').append("<li>" + min_chords[i] + "</li>");
 }
 
 
@@ -217,8 +232,10 @@ function minorPentatonic(x)
 $('.choose-key ul li').click( function(){
 	
 	$('.major-notes li').remove();
+	$('.major-chords li').remove();
 	$('.nat-minor-notes li').remove();
 	$('.har-minor-notes li').remove();
+	$('.minor-chords li').remove();
 	$('.major-pent-notes li').remove();
 	$('.minor-pent-notes li').remove();
 	$('.major-triad li').remove();
@@ -234,7 +251,12 @@ $('.choose-key ul li').click( function(){
 		$('.major-notes').append("<li>" + major_results[i] + "</li>");
 	}
 	
-	maj_pent_results = majorPentatonic(key)
+	maj_chord_results = majorScale(key);
+	for (i=0; i<major_results.length - 1; i++) {
+		$('.major-chords').append("<li>" + maj_chord_results[i] + "</li>")
+	}
+	
+	maj_pent_results = majorPentatonic(key);
 	for (i=0; i<maj_pent_results.length; i++) {
 		$('.major-pent-notes').append("<li>" + maj_pent_results[i] + "</li>");
 	}
@@ -244,7 +266,12 @@ $('.choose-key ul li').click( function(){
 		$('.nat-minor-notes').append("<li>" + natural_minor_results[i] + "</li>");
 	}
 	
-	min_pent_results = minorPentatonic(key)
+	min_chord_results = naturalMinorScale(key);
+	for (i=0; i<natural_minor_results.length - 1; i++) {
+		$('.minor-chords').append("<li>" + min_chord_results[i] + "</li>")
+	}
+	
+	min_pent_results = minorPentatonic(key);
 	for (i=0; i<min_pent_results.length; i++) {
 		$('.minor-pent-notes').append("<li>" + min_pent_results[i] + "</li>")
 	}
