@@ -300,7 +300,7 @@ $('.choose-key ul li').click( function(){
 // Menu Animation
 
 $(window).scroll( function(){
-	if ( $(this).scrollTop() > 320 ){
+	if ( $(this).scrollTop() > 290 ){
 		
 		if ( $('.choose-key').hasClass('fixed')){
 			return;

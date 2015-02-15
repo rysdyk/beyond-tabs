@@ -10,13 +10,11 @@ p { margin-top: 10px; }
 section, h2 { clear: both; }
 
 .header {
+	overflow: hidden;
 	height: 70px;
 	background: #0066CC;
 	color: white;
 	width: 100%;
-	position: fixed;
-	top: 0;
-	z-index: -1;
 }
 
 .header h1 {
@@ -29,7 +27,6 @@ section, h2 { clear: both; }
 	margin-bottom: 200px;
 	overflow: hidden;
 	/*text-transform: uppercase;*/
-	margin-top: 70px;
 }
 
 #content p { text-transform: initial; }
