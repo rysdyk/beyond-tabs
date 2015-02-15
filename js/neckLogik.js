@@ -1,8 +1,6 @@
 // All our data
 
-music = ["a", "a#", "b", "c", "c#", "d", "d#", "e", "f", "f#", "g", "g#"];
-
-musicFlat = ["a", "bb", "b", "c", "db", "d", "eb", "e", "f", "gb", "g", "ab"];
+music = ["A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab"];
 
 position = [ "root", "2nd", "3rd", "4th", "5th", "6th", "7th", "octave"];
 
@@ -135,25 +133,13 @@ function naturalMinorScale(x)
 	
 	pos = [];
 	
-	if(/#$/.test(x))
-	{
-		index = music.indexOf(x);
+	index = music.indexOf(x);
 		
-		for (i=0; i<intervals.length; i++ ) 
-		{
-			pos[i] = music[(index+intervals[i]) % 12];
-		}
-	} 
-	else 
+	for (i=0; i<intervals.length; i++ ) 
 	{
-		index = musicFlat.indexOf(x);
-		
-		for (i=0; i<intervals.length; i++ ) 
-		{
-			pos[i] = musicFlat[(index+intervals[i]) % 12];
-		}
+		pos[i] = music[(index+intervals[i]) % 12];
 	}
-	
+	 
 	nat_min_notes = [];
 	
 	for ( i=0; i<8; i++) 
@@ -169,7 +155,7 @@ function naturalMinorScale(x)
 
 function harmonicMinorScale(x)
 { 
-	index = musicFlat.indexOf(x);
+	index = music.indexOf(x);
 	
 	intervals = [ 0, 2, 3, 5, 7, 8, 11, 12];
 	
@@ -177,7 +163,7 @@ function harmonicMinorScale(x)
 	
 	for (i=0; i<intervals.length; i++ ) 
 	{
-		pos[i] = musicFlat[(index+intervals[i]) % 12];
+		pos[i] = music[(index+intervals[i]) % 12];
 	}
 	
 	har_min_notes = [];
@@ -188,21 +174,16 @@ function harmonicMinorScale(x)
 	}
 	
 	if ( x == "a") har_min_notes[6] = "g#";
-	if ( x == "a#") har_min_notes[0] = "a#";
 	if ( x == "b") har_min_notes[1] = "c#";
 	if ( x == "b") har_min_notes[4] = "f#";
 	if ( x == "b") har_min_notes[6] = "a#";
-	if ( x == "c#" ) har_min_notes[0] = "c#";
-	if ( x == "d#" ) har_min_notes[0] = "d#";
-	if ( x == "f#" ) har_min_notes[0] = "f#";
-	if ( x == "g#" ) har_min_notes[0] = "g#";
 	
 	return har_min_notes; 
 }
 
 function minorTriad(x)
 {
-	index = musicFlat.indexOf(x);
+	index = music.indexOf(x);
 	
 	intervals = [ 0, 3, 7];
 	
@@ -210,7 +191,7 @@ function minorTriad(x)
 	
 	for (i=0; i<intervals.length; i++ ) 
 	{
-		pos[i] = musicFlat[(index+intervals[i]) % 12];
+		pos[i] = music[(index+intervals[i]) % 12];
 	}
 	
 	min_triad = [];
@@ -220,12 +201,6 @@ function minorTriad(x)
 		min_triad.push(pos[i]);
 	}
 	
-	if ( x == "a#" ) min_triad[0] = "a#";
-	if ( x == "c#" ) min_triad[0] = "c#";
-	if ( x == "d#" ) min_triad[0] = "d#";
-	if ( x == "f#" ) min_triad[0] = "f#";
-	if ( x == "g#" ) min_triad[0] = "g#";
-	
 	return min_triad;
 }
 
@@ -234,24 +209,12 @@ function minorPentatonic(x)
 	intervals = [ 0, 3, 5, 7, 10];
 	
 	pos = [];
+
+	index = music.indexOf(x);
 	
-	if(/#$/.test(x))
+	for (i=0; i<intervals.length; i++ ) 
 	{
-		index = music.indexOf(x);
-		
-		for (i=0; i<intervals.length; i++ ) 
-		{
-			pos[i] = music[(index+intervals[i]) % 12];
-		}
-	} 
-	else 
-	{
-		index = musicFlat.indexOf(x);
-		
-		for (i=0; i<intervals.length; i++ ) 
-		{
-			pos[i] = musicFlat[(index+intervals[i]) % 12];
-		}
+		pos[i] = music[(index+intervals[i]) % 12];
 	}
 		
 	min_pentatonic = [];
