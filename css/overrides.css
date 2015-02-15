@@ -5,6 +5,8 @@ html, body {
 
 h1, h2 { font-family: 'Cinzel', 'Open Sans', Tahoma, sans-serif;}
 
+p { margin-top: 10px; }
+
 section, h2 { clear: both; }
 
 .header {
@@ -32,8 +34,7 @@ section, h2 { clear: both; }
 
 #content p { text-transform: initial; }
 
-
-
+/* choose key styles */
 
 .choose-key {
 	height: 250px;
@@ -87,6 +88,7 @@ section, h2 { clear: both; }
 	width: 100%;
 	box-shadow: 2px 2px 5px #cecece;
 	text-align: center;
+	z-index: 100;
 }
 
 .choose-key.fixed h2, .choose-key.fixed ul { 
@@ -141,6 +143,8 @@ section, h2 { clear: both; }
 	padding: 0;
 }
 
+.notes { min-height: 80px; }
+
 .result .position li, 
 .result .notes li, 
 .result .maj-pent-pos li, 
@@ -175,7 +179,7 @@ section, h2 { clear: both; }
 .result .min-chords li:first-child
  { margin-left: 0; }
  
- 
+.space { height: 80px;}
  
  
  /* Footer */

@@ -1,8 +1,8 @@
 // All our data
 
-music = ["e", "f", "f#", "g", "g#", "a", "a#", "b", "c", "c#", "d", "d#"];
+music = ["a", "a#", "b", "c", "c#", "d", "d#", "e", "f", "f#", "g", "g#"];
 
-musicFlat = ["e", "f", "gb", "g", "ab", "a", "bb", "b", "c", "db", "d", "eb"];
+musicFlat = ["a", "bb", "b", "c", "db", "d", "eb", "e", "f", "gb", "g", "ab"];
 
 position = [ "root", "2nd", "3rd", "4th", "5th", "6th", "7th", "octave"];
 
@@ -16,6 +16,9 @@ maj_chords = ['major', 'minor', 'minor', 'major', 'major', 'minor', 'diminished'
 
 min_chords = ['minor', 'diminished', 'major', 'minor', 'minor', 'major', 'major'];
 
+
+// &#x266f;
+// &#x266d;
 
 
 // initial settings
@@ -55,13 +58,11 @@ for (i=0; i<min_chords.length; i++)
 	$('.min-chords').append("<li>" + min_chords[i] + "</li>");
 }
 
-
-
 // functions for setting things
 // x is the musical key
 
 function majorScale(x)
-{ 
+{ 	
 	index = music.indexOf(x);
 	
 	intervals = [0, 2, 4, 5, 7, 9, 11, 12];
@@ -80,7 +81,7 @@ function majorScale(x)
 		maj_notes.push(pos[i]);
 	}
 	
-	if ( x == "f") maj_notes[3] = "bb";
+	if ( x == "f") maj_notes[3] = "b#";
 	
 	return maj_notes;
 }
@@ -129,16 +130,28 @@ function majorPentatonic(x)
 
 
 function naturalMinorScale(x)
-{ 
-	index = musicFlat.indexOf(x);
-	
+{ 	
 	intervals = [ 0, 2, 3, 5, 7, 8, 10, 12];
 	
 	pos = [];
 	
-	for (i=0; i<intervals.length; i++ ) 
+	if(/#$/.test(x))
 	{
-		pos[i] = musicFlat[(index+intervals[i]) % 12];
+		index = music.indexOf(x);
+		
+		for (i=0; i<intervals.length; i++ ) 
+		{
+			pos[i] = music[(index+intervals[i]) % 12];
+		}
+	} 
+	else 
+	{
+		index = musicFlat.indexOf(x);
+		
+		for (i=0; i<intervals.length; i++ ) 
+		{
+			pos[i] = musicFlat[(index+intervals[i]) % 12];
+		}
 	}
 	
 	nat_min_notes = [];
@@ -147,7 +160,10 @@ function naturalMinorScale(x)
 	{
 		nat_min_notes.push(pos[i]);
 	}
-
+	
+	if ( x == "a#") nat_min_notes[1] = "b#";
+	if ( x == "a#") nat_min_notes[4] = "e#";
+	
 	return nat_min_notes; 
 }
 
@@ -172,9 +188,14 @@ function harmonicMinorScale(x)
 	}
 	
 	if ( x == "a") har_min_notes[6] = "g#";
+	if ( x == "a#") har_min_notes[0] = "a#";
 	if ( x == "b") har_min_notes[1] = "c#";
 	if ( x == "b") har_min_notes[4] = "f#";
 	if ( x == "b") har_min_notes[6] = "a#";
+	if ( x == "c#" ) har_min_notes[0] = "c#";
+	if ( x == "d#" ) har_min_notes[0] = "d#";
+	if ( x == "f#" ) har_min_notes[0] = "f#";
+	if ( x == "g#" ) har_min_notes[0] = "g#";
 	
 	return har_min_notes; 
 }
@@ -199,22 +220,40 @@ function minorTriad(x)
 		min_triad.push(pos[i]);
 	}
 	
+	if ( x == "a#" ) min_triad[0] = "a#";
+	if ( x == "c#" ) min_triad[0] = "c#";
+	if ( x == "d#" ) min_triad[0] = "d#";
+	if ( x == "f#" ) min_triad[0] = "f#";
+	if ( x == "g#" ) min_triad[0] = "g#";
+	
 	return min_triad;
 }
 
 function minorPentatonic(x)
 {
-	index = musicFlat.indexOf(x);
-	
 	intervals = [ 0, 3, 5, 7, 10];
 	
 	pos = [];
 	
-	for (i=0; i<intervals.length; i++ ) 
+	if(/#$/.test(x))
 	{
-		pos[i] = musicFlat[(index+intervals[i]) % 12];
+		index = music.indexOf(x);
+		
+		for (i=0; i<intervals.length; i++ ) 
+		{
+			pos[i] = music[(index+intervals[i]) % 12];
+		}
+	} 
+	else 
+	{
+		index = musicFlat.indexOf(x);
+		
+		for (i=0; i<intervals.length; i++ ) 
+		{
+			pos[i] = musicFlat[(index+intervals[i]) % 12];
+		}
 	}
-	
+		
 	min_pentatonic = [];
 	
 	for ( i=0; i<5; i++) 
@@ -244,51 +283,51 @@ $('.choose-key ul li').click( function(){
 	$('.choose-key ul li').filter('.active').removeClass('active');
 	$(this).addClass('active');
 	
-	key = $(this).text().toLowerCase();
+	key = $(this).html();
 	
 	major_results = majorScale(key);
-	for (i=0; i<major_results.length; i++) {
-		$('.major-notes').append("<li>" + major_results[i] + "</li>");
+	for (i=0; i<maj_notes.length; i++) {
+		$('.major-notes').hide().append("<li>" + major_results[i] + "</li>").fadeIn();
 	}
 	
 	maj_chord_results = majorScale(key);
 	for (i=0; i<major_results.length - 1; i++) {
-		$('.major-chords').append("<li>" + maj_chord_results[i] + "</li>")
+		$('.major-chords').hide().append("<li>" + maj_chord_results[i] + "</li>").fadeIn();
 	}
 	
 	maj_pent_results = majorPentatonic(key);
 	for (i=0; i<maj_pent_results.length; i++) {
-		$('.major-pent-notes').append("<li>" + maj_pent_results[i] + "</li>");
+		$('.major-pent-notes').hide().append("<li>" + maj_pent_results[i] + "</li>").fadeIn();
 	}
 	
 	natural_minor_results = naturalMinorScale(key);
 	for (i=0; i<natural_minor_results.length; i++) {
-		$('.nat-minor-notes').append("<li>" + natural_minor_results[i] + "</li>");
+		$('.nat-minor-notes').hide().append("<li>" + natural_minor_results[i] + "</li>").fadeIn();
 	}
 	
 	min_chord_results = naturalMinorScale(key);
 	for (i=0; i<natural_minor_results.length - 1; i++) {
-		$('.minor-chords').append("<li>" + min_chord_results[i] + "</li>")
+		$('.minor-chords').hide().append("<li>" + min_chord_results[i] + "</li>").fadeIn();
 	}
 	
 	min_pent_results = minorPentatonic(key);
 	for (i=0; i<min_pent_results.length; i++) {
-		$('.minor-pent-notes').append("<li>" + min_pent_results[i] + "</li>")
+		$('.minor-pent-notes').hide().append("<li>" + min_pent_results[i] + "</li>").fadeIn();
 	}
 	
 	harmonic_minor_results = harmonicMinorScale(key);
 	for (i=0; i<harmonic_minor_results.length; i++) {
-		$('.har-minor-notes').append("<li>" + harmonic_minor_results[i] + "</li>");
+		$('.har-minor-notes').hide().append("<li>" + harmonic_minor_results[i] + "</li>").fadeIn();
 	}
 	
 	maj_triad_results = majorTriad(key);
 	for (i=0; i<maj_triad_results.length; i++) {
-		$('.major-triad').append("<li>" + maj_triad_results[i] + "</li>");
+		$('.major-triad').hide().append("<li>" + maj_triad_results[i] + "</li>").fadeIn();
 	}
 	
 	min_triad_results = minorTriad(key);
 	for (i=0; i<min_triad_results.length; i++) {
-		$('.minor-triad').append("<li>" + min_triad_results[i] + "</li>");
+		$('.minor-triad').hide().append("<li>" + min_triad_results[i] + "</li>").fadeIn();
 	}
 
 })
@@ -312,4 +351,3 @@ $(window).scroll( function(){
 		$('.space-holder').hide();
 	}
 })
-
