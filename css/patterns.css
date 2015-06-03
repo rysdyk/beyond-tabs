@@ -47,62 +47,62 @@ section p {
 }
 
 .pos1 .note1 {
-	top: 68px;
+	top: 98px;
 	left: 32px;
 }
 
 .pos1 .note2 {
-	top: 110px;
+	top: 140px;
 	left: 123px;
 }
 
 .pos2 .note1 {
-	top: 110px;
+	top: 140px;
 	left: 32px;
 }
 
 .pos2 .note2 {
-	top: 82px;
+	top: 112px;
 	left: 125px;
 }
 
 .pos3 .note1 {
-	top: 82px;
+	top: 112px;
 	left: 32px;
 }
 
 .pos3 .note2 {
-	top: 124px;
+	top: 154px;
 	left: 160px;
 }
 
 .pos3 .note3 {
-	top: 54px;
+	top: 84px;
 	left: 160px;
 }
 
 .pos4 .note1 {
-	top: 124px;
+	top: 154px;
 	left: 32px;
 }
 
 .pos4 .note2 {
-	top: 54px;
+	top: 84px;
 	left: 32px;
 }
 
 .pos4 .note3 {
-	top: 96px;
+	top: 126px;
 	left: 130px;
 }
 
 .pos5 .note1 {
-	top: 96px;
+	top: 126px;
 	left: 32px;
 }
 
 .pos5 .note2 {
-	top: 68px;
+	top: 98px;
 	left: 165px;
 }
 
@@ -146,97 +146,97 @@ section p {
 }
 
 .c-shape .note1 {
-	top: 43px;
+	top: 80px;
 	left: 43px;
-	height: 100px;
+	height: 88px;
 }
 
 .c-shape .note2 {
-	top: 68px;
+	top: 98px;
 	left: 85px;
 }
 
 .c-shape .note3 {
-	top: 95px;
+	top: 125px;
 	left: 126px;
 }
 
 .c-shape .note4 {
-	top: 109px;
+	top: 139px;
 	left: 160px;
 }
 
 .a-shape .note1 {
-	top: 49px;
+	top: 80px;
 	left: 41px;
-	height: 74px;
+	height: 73px;
 }
 
 .a-shape .note2 {
 	left: 131px;
-	top: 68px;
+	top: 98px;
 	height:40px;
 }
 
 .g-shape .note1 {
 	left: 41px;
-	top: 68px;
+	top: 98px;
 	height: 40px;
 }
 
 .g-shape .note2 {
-	top: 110px;
+	top: 140px;
 	left: 131px;
 }
 
 .g-shape .note3 {
-	top: 124px;
+	top: 154px;
 	left: 165px;
 }
 
 .g-shape .note4 {
-	top: 54px;
+	top: 84px;
 	left: 165px;
 }
 
 .e-shape .note1 {
-	top: 43px;
+	top: 80px;
 	left: 43px;
-	height: 100px;
+	height: 88px;
 }
 
 .e-shape .note2 {
-	top: 96px;
+	top: 112px;
 	left: 85px;
 }
 
 .e-shape .note3 {
-	top: 110px;
+	top: 126px;
 	left: 126px;
 }
 
 .e-shape .note4 {
-	top: 123px;
+	top: 140px;
 	left: 126px;
 }
 
 .d-shape .note1 {
-	top: 43px;
+	top: 80px;
 	left: 43px;
-	height: 67px;
+	height: 58px;
 }
 
 .d-shape .note2 {
-	top: 54px;
+	top: 84px;
 	left: 126px;
 }
 
 .d-shape .note3 {
-	top: 82px;
+	top: 112px;
 	left: 126px;
 }
 
 .d-shape .note4 {
-	top: 68px;
+	top: 98px;
 	left: 160px;
 }
