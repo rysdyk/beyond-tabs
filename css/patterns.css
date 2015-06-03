@@ -144,3 +144,99 @@ section p {
 	top: 43px;
 	left: 930px;
 }
+
+.c-shape .note1 {
+	top: 43px;
+	left: 43px;
+	height: 100px;
+}
+
+.c-shape .note2 {
+	top: 68px;
+	left: 85px;
+}
+
+.c-shape .note3 {
+	top: 95px;
+	left: 126px;
+}
+
+.c-shape .note4 {
+	top: 109px;
+	left: 160px;
+}
+
+.a-shape .note1 {
+	top: 49px;
+	left: 41px;
+	height: 74px;
+}
+
+.a-shape .note2 {
+	left: 131px;
+	top: 68px;
+	height:40px;
+}
+
+.g-shape .note1 {
+	left: 41px;
+	top: 68px;
+	height: 40px;
+}
+
+.g-shape .note2 {
+	top: 110px;
+	left: 131px;
+}
+
+.g-shape .note3 {
+	top: 124px;
+	left: 165px;
+}
+
+.g-shape .note4 {
+	top: 54px;
+	left: 165px;
+}
+
+.e-shape .note1 {
+	top: 43px;
+	left: 43px;
+	height: 100px;
+}
+
+.e-shape .note2 {
+	top: 96px;
+	left: 85px;
+}
+
+.e-shape .note3 {
+	top: 110px;
+	left: 126px;
+}
+
+.e-shape .note4 {
+	top: 123px;
+	left: 126px;
+}
+
+.d-shape .note1 {
+	top: 43px;
+	left: 43px;
+	height: 67px;
+}
+
+.d-shape .note2 {
+	top: 54px;
+	left: 126px;
+}
+
+.d-shape .note3 {
+	top: 82px;
+	left: 126px;
+}
+
+.d-shape .note4 {
+	top: 68px;
+	left: 160px;
+}
