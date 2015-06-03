@@ -20,38 +20,31 @@ beyondTabs.min_chords = ['minor', 'diminished', 'major', 'minor', 'minor', 'majo
 // set up the DOM
 
 (function(){
-	for (i=0; i<beyondTabs.music.length; i++)
-	{
+	for (i=0; i<beyondTabs.music.length; i++) {
 		$('.keys').append("<li>" + beyondTabs.music[i] + "</li>");
 	}
 
-	for (i=0; i<beyondTabs.position.length; i++)
-	{
+	for (i=0; i<beyondTabs.position.length; i++) {
 		$('.position').append("<li>" + beyondTabs.position[i] + "</li>");
 	}
 
-	for (i=0; i<beyondTabs.maj_pent_pos.length; i++)
-	{
+	for (i=0; i<beyondTabs.maj_pent_pos.length; i++) {
 		$('.maj-pent-pos').append("<li>" + beyondTabs.maj_pent_pos[i] + "</li>");
 	}
 
-	for (i=0; i<beyondTabs.min_pent_pos.length; i++)
-	{
+	for (i=0; i<beyondTabs.min_pent_pos.length; i++) {
 		$('.min-pent-pos').append("<li>" + beyondTabs.min_pent_pos[i] + "</li>");
 	}
 
-	for (i=0; i<beyondTabs.triad_position.length; i++)
-	{
+	for (i=0; i<beyondTabs.triad_position.length; i++) {
 		$('.triad-position').append("<li>" + beyondTabs.triad_position[i] + "</li>");
 	}
 
-	for (i=0; i<beyondTabs.maj_chords.length; i++)
-	{
+	for (i=0; i<beyondTabs.maj_chords.length; i++) {
 		$('.maj-chords').append("<li>" + beyondTabs.maj_chords[i] + "</li>");
 	}
 
-	for (i=0; i<beyondTabs.min_chords.length; i++)
-	{
+	for (i=0; i<beyondTabs.min_chords.length; i++) {
 		$('.min-chords').append("<li>" + beyondTabs.min_chords[i] + "</li>");
 	}
 })();
@@ -67,15 +60,13 @@ beyondTabs.majorScale = function(x)
 	
 	pos = [];
 	
-	for (i=0; i<intervals.length; i++ ) 
-	{
+	for (i=0; i<intervals.length; i++ ) {
 		pos[i] = beyondTabs.music[(index+intervals[i]) % 12];
 	}
 	
 	maj_notes = [];
 	
-	for ( i=0; i<8; i++) 
-	{
+	for ( i=0; i<8; i++) {
 		maj_notes.push(pos[i]);
 	}
 	
@@ -90,36 +81,32 @@ beyondTabs.majorTriad = function(x)
 	
 	intervals = [0, 4, 7];
 	
-	for (i=0; i<intervals.length; i++ ) 
-	{
+	for (i=0; i<intervals.length; i++ ) {
 		pos[i] = beyondTabs.music[(index+intervals[i]) % 12];
 	}
 	
 	maj_triad = [];
 	
-	for ( i=0; i<3; i++) 
-	{
+	for ( i=0; i<3; i++) {
 		maj_triad.push(pos[i]);
 	}
 
 	return maj_triad;
 }
 
-beyondTabs.majorPentatonic = function(x)
-{
+beyondTabs.majorPentatonic = function(x) {
+	
 	index = beyondTabs.music.indexOf(x);
 	
 	intervals = [0, 2, 4, 7, 9];
 	
-	for (i=0; i<intervals.length; i++ ) 
-	{
+	for (i=0; i<intervals.length; i++ ) {
 		pos[i] = beyondTabs.music[(index+intervals[i]) % 12];
 	}
 	
 	maj_pent = [];
 	
-	for ( i=0; i<5; i++) 
-	{
+	for ( i=0; i<5; i++) {
 		maj_pent.push(pos[i]);
 	}
 	
@@ -127,23 +114,20 @@ beyondTabs.majorPentatonic = function(x)
 }
 
 
-beyondTabs.naturalMinorScale = function(x)
-{ 	
+beyondTabs.naturalMinorScale = function(x) { 	
 	intervals = [ 0, 2, 3, 5, 7, 8, 10, 12];
 	
 	pos = [];
 	
 	index = beyondTabs.music.indexOf(x);
 		
-	for (i=0; i<intervals.length; i++ ) 
-	{
+	for (i=0; i<intervals.length; i++ ) {
 		pos[i] = beyondTabs.music[(index+intervals[i]) % 12];
 	}
 	 
 	nat_min_notes = [];
 	
-	for ( i=0; i<8; i++) 
-	{
+	for ( i=0; i<8; i++) {
 		nat_min_notes.push(pos[i]);
 	}
 	
@@ -153,23 +137,21 @@ beyondTabs.naturalMinorScale = function(x)
 	return nat_min_notes; 
 }
 
-beyondTabs.harmonicMinorScale = function(x)
-{ 
+beyondTabs.harmonicMinorScale = function(x) { 
+	
 	index = beyondTabs.music.indexOf(x);
 	
 	intervals = [ 0, 2, 3, 5, 7, 8, 11, 12];
 	
 	pos = [];
 	
-	for (i=0; i<intervals.length; i++ ) 
-	{
+	for (i=0; i<intervals.length; i++ ) {
 		pos[i] = beyondTabs.music[(index+intervals[i]) % 12];
 	}
 	
 	har_min_notes = [];
 	
-	for ( i=0; i<8; i++) 
-	{
+	for ( i=0; i<8; i++) {
 		har_min_notes.push(pos[i]);
 	}
 	
@@ -181,46 +163,41 @@ beyondTabs.harmonicMinorScale = function(x)
 	return har_min_notes; 
 }
 
-beyondTabs.minorTriad = function(x)
-{
+beyondTabs.minorTriad = function(x) {
+	
 	index = beyondTabs.music.indexOf(x);
 	
 	intervals = [ 0, 3, 7];
 	
 	pos = [];
 	
-	for (i=0; i<intervals.length; i++ ) 
-	{
+	for (i=0; i<intervals.length; i++ ) {
 		pos[i] = beyondTabs.music[(index+intervals[i]) % 12];
 	}
 	
 	min_triad = [];
 	
-	for ( i=0; i<3; i++) 
-	{
+	for ( i=0; i<3; i++) {
 		min_triad.push(pos[i]);
 	}
 	
 	return min_triad;
 }
 
-beyondTabs.minorPentatonic = function(x)
-{
+beyondTabs.minorPentatonic = function(x) {
 	intervals = [ 0, 3, 5, 7, 10];
 	
 	pos = [];
 
 	index = beyondTabs.music.indexOf(x);
 	
-	for (i=0; i<intervals.length; i++ ) 
-	{
+	for (i=0; i<intervals.length; i++ ) {
 		pos[i] = beyondTabs.music[(index+intervals[i]) % 12];
 	}
 		
 	min_pentatonic = [];
 	
-	for ( i=0; i<5; i++) 
-	{
+	for ( i=0; i<5; i++) {
 		min_pentatonic.push(pos[i]);
 	}
 

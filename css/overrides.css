@@ -11,15 +11,21 @@ section, h2 { clear: both; }
 
 .header {
 	overflow: hidden;
-	height: 70px;
+	height: 80px;
 	background: #0066CC;
 	color: white;
 	width: 100%;
+	text-align: center;
+}
+
+.header nav a {
+	color: #fff;
+	margin: 0 10px;
 }
 
 .header h1 {
-	text-align: center;
 	font-size: 28px;
+	margin-bottom: 2px;
 }
 
 #content {
