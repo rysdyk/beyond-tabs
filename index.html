@@ -11,22 +11,21 @@
 	</head>
 	<body>
 		<section class="header">
+			<div class="col-md-12">
 			<h1>beyondTabs</h1>
 			<nav>
 				<a href="index.html">Keys</a>
 				<a href="patterns.html">Patterns</a>
 			</nav>
+		</div>
 		</section>
 		
 		<div id="content">
 			
-			<section class="choose-key">	
-				<h2>Choose a Key:</h2>
-				<ul class="keys col-span-12"></ul>
-			</section>
-			<section class="space-holder"></section>
-			
-			<section class="result">
+			<section class="row result">
+				
+				<div class="col-md-9">
+				
 				<h2>Notes in Major Key:</h2>
 				<ul class="position"></ul>
 				<div class="space">
@@ -113,6 +112,16 @@
 					<li>half</li>
 				</ul>
 				<p>Like the natural minor scale: the 3rd and 6th notes are flatted, but the 7th note is not flattened.</p>
+				
+			</div> <!-- col-md-9 -->
+			
+			<div class="col-md-3">
+				<nav class="sidebar choose-key">
+					<h2>Choose a Key</h2>
+					<ul class="keys"></ul>
+					<a href="#">Back to Top</a>
+				</nav>
+			</div>
 			</section>
 			
 		</div>
@@ -125,12 +134,8 @@
 			</nav>
 			<p>&copy; 2015</p>
 		</footer>
+	
 	<script src="js/neckLogik.js"></script>
-		<script>
-		(function(){
-			var y = "awesome";
-			console.log(y);
-		}())
-		</script>
+
 	</body>
 </html>	
