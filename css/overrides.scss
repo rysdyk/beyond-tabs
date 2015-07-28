@@ -1,0 +1,184 @@
+html, body {
+	color: #888;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2 { font-family: 'Cinzel', 'Open Sans', Tahoma, sans-serif;}
+
+p { margin-top: 10px; }
+
+section, h2 { clear: both; }
+
+.header {
+	overflow: hidden;
+	height: 50px;
+	background: #0066CC;
+	color: white;
+	width: 100%;
+	text-align: center;
+	position: fixed;
+	z-index: 2;
+	
+	nav {
+		float: right;
+		
+		a {
+			color: #fff;
+			margin: 0 10px;
+			line-height: 50px;
+		}
+	}
+	
+	h1 {
+		float: left;
+		font-size: 28px;
+		margin: 0;
+		line-height: 50px;
+	}
+}
+
+#content {
+	background: #fff;
+	margin-bottom: 200px;
+	overflow: hidden;
+	
+	p { text-transform: initial; }
+}
+
+/* choose key styles */
+
+
+.space-holder {
+	display: none;
+	height: 250px;
+}
+
+.sidebar {
+	background: #fff;
+	margin-top: 75px;
+	position: fixed;
+	
+	h2 {
+		font-size: 16px;
+		margin: 0 0 10px !important;
+	}
+	
+	ul {
+		list-style: none;
+		overflow: hidden;
+		padding: 0 30px;
+		
+		li {
+			height: 30px;
+			font-size: 15px;
+			line-height: 28px;
+			background-color: #fff;
+			border: 1px solid #c3c3c3;
+			margin: 0 9px 15px;
+			width: 50px;
+			float: left;
+			cursor: pointer;
+			
+			&.active {
+				background: red;
+				color: #fff;
+			}
+		}
+	}
+}
+
+
+/*results*/
+
+.result {
+	margin-bottom: 100px;
+	overflow: hidden;
+	text-align: center;
+	
+	h2 { 
+		text-align: center;
+		margin: 100px 0 20px; 
+	}
+}
+
+.result {
+	.position, .intervals, .notes, .maj-pent-pos, .min-pent-pos, .triad-position, .maj-chords, .min-chords {
+		text-align: center;
+		padding: 0;
+		
+		li {
+			list-style: none;
+			display: inline-block;
+			width: 70px;
+			margin: 0 5px;
+			
+			&:first-child { margin-left: 0; }
+		}	
+	}
+	
+	.intervals li {
+		width: 70px;
+		margin-left: 10px;
+		display: inline-block;
+		list-style: none;
+		vertical-align: top;
+	}
+	
+	.notes li { 
+		font-size: 20px;
+		height: 70px;
+		background: #fff;
+		border-radius: 35px;
+		line-height: 70px;
+		border: 1px solid #eee;
+		font-weight: 300;
+	}
+}
+
+
+
+
+.notes { min-height: 80px; }
+ 
+.space { height: 80px;}
+ 
+ 
+ /* Footer */
+ 
+ footer {
+ 	position: fixed;
+ 	bottom: 0;
+ 	height: 200px;
+ 	z-index: -1;
+ 	width: 100%;
+ 	background-color: #000;
+ 	text-align: center;
+	
+	h1 {
+	 	color: #fff;
+	 	padding-top: 65px;
+	 	margin-top: 0;
+	 }
+	 
+	 nav {
+	 	 display: block;
+	 	 margin: 0 0 10px;
+		 
+		 a {
+		 	 text-decoration: none;
+		 	 margin: 0 10px;
+		 	 color: #fff;
+			 
+			 &:hover {
+				 color: red;
+			 }
+		 }
+	 }
+ }
+ 
+ 
+/* Responsive */
+
+@media (max-width: 760px) {
+
+}
