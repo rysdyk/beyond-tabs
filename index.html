@@ -10,122 +10,133 @@
 		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 	</head>
 	<body>
-		<section class="header">
-			<div class="col-md-12">
+		<header class="header col-md-12">
+			<a class="shelf" href="#nav">
+				<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				</ul>
+			</a>
 			<h1>beyondTabs</h1>
 			<nav>
 				<a href="index.html">Keys</a>
 				<a href="patterns.html">Patterns</a>
 			</nav>
-		</div>
-		</section>
-		
-		<div id="content">
-			
+		</header>
+
+		<div id="content" class="container-fluid">
+
 			<section class="row result">
-				
+
+				<div class="col-md-3">
+					<nav class="sidebar choose-key" id="nav">
+						<h2>Choose a Key</h2>
+						<ul class="keys"></ul>
+						<a href="#">Back to Top</a>
+					</nav>
+				</div>
+
 				<div class="col-md-9">
-				
-				<h2>Notes in Major Key:</h2>
-				<ul class="position"></ul>
-				<div class="space">
-					<ul class="major-notes notes"></ul>
-				</div>
-				<ul class="intervals">
-					<li>whole</li>
-					<li>whole</li>
-					<li>half</li>
-					<li>whole</li>
-					<li>whole</li>
-					<li>whole</li>
-					<li>half</li>
-				</ul>
-				
-				<h2>Chords in Major Key:</h2>
-				<ul class="maj-chords"></ul>
-				<div class="space">
-					<ul class="major-chords notes"></ul>
-				</div>
-				
-				<h2>Notes in Major Triad:</h2>
-				<ul class="triad-position"></ul>
-				<div class="space">
-					<ul class="major-triad notes"></ul>
-				</div>
-				<p>These notes comprise a major chord</p>
-			
-				<h2>Notes in Major Pentatonic:</h2>
-				<ul class="maj-pent-pos"></ul>
-				<div class="space">
-					<ul class="major-pent-notes notes"></ul>
-				</div>
-		
-				<h2>Notes in the Natural Minor Key:</h2>
-				<ul class="position"></ul>
-				<div class="space">
-					<ul class="nat-minor-notes notes"></ul>
-				</div>
-				<ul class="intervals">
-					<li>whole</li>
-					<li>half</li>
-					<li>whole</li>
-					<li>whole</li>
-					<li>half</li>
-					<li>whole</li>
-					<li>whole</li>
-				</ul>
-				<p>Compared to major scale: the 3rd, 6th, and 7th notes are flattened.</p>
-				
-				<h2>Chords in Minor Scale</h2>
-				<ul class="min-chords"></ul>
-				<div class="space">
-					<ul class="minor-chords notes"></ul>
-				</div>
-				
-				<h2>Notes in Minor Triad:</h2>
-				<ul class="triad-position"></ul>
-				<div class="space">
-					<ul class="minor-triad notes"></ul>
-				</div>
-				<p>These notes comprise a minor chord</p>
-				<p>Compared to major triad: the 3rd is flattened</p>
-			
-				<h2>Notes in Minor Pentatonic:</h2>
-				<ul class="min-pent-pos"></ul>
-				<div class="space">
-					<ul class="minor-pent-notes notes"></ul>
-				</div>
-				<p>Compared to major pentatonic: the 3rd is flatted, a flattened 7th is added, and the 2nd is removed.
-			
-				<h2>Notes in the Harmonic Minor Key:</h2>
-				<ul class="position"></ul>
-				<div class="space">
-					<ul class="har-minor-notes notes"></ul>
-				</div>
-				<ul class="intervals">
-					<li>whole</li>
-					<li>half</li>
-					<li>whole</li>
-					<li>whole</li>
-					<li>half</li>
-					<li>whole + half</li>
-					<li>half</li>
-				</ul>
-				<p>Like the natural minor scale: the 3rd and 6th notes are flatted, but the 7th note is not flattened.</p>
-				
-			</div> <!-- col-md-9 -->
-			
-			<div class="col-md-3">
-				<nav class="sidebar choose-key">
-					<h2>Choose a Key</h2>
-					<ul class="keys"></ul>
-					<a href="#">Back to Top</a>
-				</nav>
-			</div>
+
+					<h2>Notes in Major Key:</h2>
+					<ul class="position"></ul>
+					<div class="space">
+						<ul class="major-notes notes"></ul>
+					</div>
+					<ul class="intervals">
+						<li>root</li>
+						<li>whole</li>
+						<li>whole</li>
+						<li>half</li>
+						<li>whole</li>
+						<li>whole</li>
+						<li>whole</li>
+						<li>half</li>
+					</ul>
+
+					<h2>Chords in Major Key:</h2>
+					<ul class="maj-chords"></ul>
+					<div class="space">
+						<ul class="major-chords notes"></ul>
+					</div>
+
+					<h2>Notes in Major Triad:</h2>
+					<ul class="triad-position"></ul>
+					<div class="space">
+						<ul class="major-triad notes"></ul>
+					</div>
+					<p>These notes comprise a major chord.</p>
+
+					<h2>Notes in Major Pentatonic:</h2>
+					<ul class="maj-pent-pos"></ul>
+					<div class="space">
+						<ul class="major-pent-notes notes"></ul>
+					</div>
+					<p>No 4th or 7th note.</p>
+
+					<h2>Notes in the Natural Minor Key:</h2>
+					<ul class="position"></ul>
+					<div class="space">
+						<ul class="nat-minor-notes notes"></ul>
+					</div>
+					<ul class="intervals">
+						<li>root</li>
+						<li>whole</li>
+						<li>half</li>
+						<li>whole</li>
+						<li>whole</li>
+						<li>half</li>
+						<li>whole</li>
+						<li>whole</li>
+					</ul>
+					<p>Compared to major scale: the 3rd, 6th, and 7th notes are flattened.</p>
+
+					<h2>Chords in Minor Scale</h2>
+					<ul class="min-chords"></ul>
+					<div class="space">
+						<ul class="minor-chords notes"></ul>
+					</div>
+					<p>Same as the major scale starting in the 6th position. Compare A minor to C major.</p>
+
+					<h2>Notes in Minor Triad:</h2>
+					<ul class="triad-position"></ul>
+					<div class="space">
+						<ul class="minor-triad notes"></ul>
+					</div>
+					<p>These notes compose a minor chord</p>
+					<p>Compared to major triad: the 3rd is flattened</p>
+
+					<h2>Notes in Minor Pentatonic:</h2>
+					<ul class="min-pent-pos"></ul>
+					<div class="space">
+						<ul class="minor-pent-notes notes"></ul>
+					</div>
+					<p>Compared to major pentatonic: the 3rd is flatted, a flattened 7th is added, and the 2nd is removed.
+
+					<h2>Notes in the Harmonic Minor Key:</h2>
+					<ul class="position"></ul>
+					<div class="space">
+						<ul class="har-minor-notes notes"></ul>
+					</div>
+					<ul class="intervals">
+						<li>root</li>
+						<li>whole</li>
+						<li>half</li>
+						<li>whole</li>
+						<li>whole</li>
+						<li>half</li>
+						<li>whole + half</li>
+						<li>half</li>
+					</ul>
+					<p>Like the natural minor scale: the 3rd and 6th notes are flatted, but the 7th note is not flattened.</p>
+
+				</div> <!-- col-md-9 -->
+
 			</section>
-			
+
 		</div>
-		
+
 		<footer>
 			<h1>beyondTabs</h1>
 			<nav>
@@ -134,8 +145,8 @@
 			</nav>
 			<p>&copy; 2015</p>
 		</footer>
-	
+
 	<script src="js/neckLogik.js"></script>
 
 	</body>
-</html>	
+</html>

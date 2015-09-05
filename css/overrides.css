@@ -11,7 +11,7 @@ p {
 section, h2 {
   clear: both; }
 
-.header {
+header {
   overflow: hidden;
   height: 50px;
   background: #0066CC;
@@ -20,13 +20,31 @@ section, h2 {
   text-align: center;
   position: fixed;
   z-index: 2; }
-  .header nav {
+  header a.shelf {
+    display: none;
+    float: left;
+    width: 50px;
+    position: relative;
+    margin: 6px 30px 0 0;
+    padding: 0; }
+    header a.shelf ul {
+      position: relative;
+      float: left;
+      width: 50px;
+      list-style: none;
+      padding: 0; }
+      header a.shelf ul li {
+        width: 50px;
+        height: 8px;
+        margin-bottom: 6px;
+        background: #fff; }
+  header nav {
     float: right; }
-    .header nav a {
+    header nav a {
       color: #fff;
       margin: 0 10px;
       line-height: 50px; }
-  .header h1 {
+  header h1 {
     float: left;
     font-size: 28px;
     margin: 0;
@@ -46,8 +64,9 @@ section, h2 {
 
 .sidebar {
   background: #fff;
-  margin-top: 75px;
-  position: fixed; }
+  margin-top: 50px;
+  position: fixed;
+  width: 25%; }
   .sidebar h2 {
     font-size: 16px;
     margin: 0 0 10px !important; }
@@ -61,13 +80,20 @@ section, h2 {
       line-height: 28px;
       background-color: #fff;
       border: 1px solid #c3c3c3;
-      margin: 0 9px 15px;
-      width: 50px;
+      margin: 0 8px 15px;
+      width: 25%;
       float: left;
       cursor: pointer; }
       .sidebar ul li.active {
         background: red;
-        color: #fff; }
+        color: #fff;
+        transition: background 300ms ease-out; }
+        .sidebar ul li.active:hover {
+          background: red; }
+      .sidebar ul li:hover {
+        background: #c3c3c3;
+        color: #fff;
+        transition: background 300ms ease-out; }
 
 /*results*/
 .result {
@@ -76,7 +102,7 @@ section, h2 {
   text-align: center; }
   .result h2 {
     text-align: center;
-    margin: 100px 0 20px; }
+    margin: 50px 0 20px; }
 
 .result .position, .result .intervals, .result .notes, .result .maj-pent-pos, .result .min-pent-pos, .result .triad-position, .result .maj-chords, .result .min-chords {
   text-align: center;
@@ -85,7 +111,7 @@ section, h2 {
     list-style: none;
     display: inline-block;
     width: 70px;
-    margin: 0 5px; }
+    margin: 0 15px; }
     .result .position li:first-child, .result .intervals li:first-child, .result .notes li:first-child, .result .maj-pent-pos li:first-child, .result .min-pent-pos li:first-child, .result .triad-position li:first-child, .result .maj-chords li:first-child, .result .min-chords li:first-child {
       margin-left: 0; }
 .result .intervals li {
@@ -133,5 +159,36 @@ footer {
         color: red; }
 
 /* Responsive */
+@media (max-width: 990px) {
+  header a.shelf {
+    display: block; }
+
+  .col-md-3 {
+    position: static; }
+
+  .sidebar {
+    display: none;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; }
+    .sidebar:target {
+      margin-top: 0;
+      padding-top: 50px;
+      display: block;
+      z-index: 2;
+      background: none; }
+      .sidebar:target a {
+        position: absolute;
+        top: 40px;
+        height: 35px;
+        color: #000;
+        left: 0; }
+      .sidebar:target h2 {
+        display: none; }
+      .sidebar:target ul {
+        background: #fff; } }
 
 /*# sourceMappingURL=overrides.css.map */
