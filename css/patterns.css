@@ -5,8 +5,8 @@
 }
 
 .fretboard-chunks {
-	position: relative; 
-	overflow: hidden; 
+	position: relative;
+	overflow: hidden;
 }
 
 .fretboard {
@@ -24,7 +24,7 @@
 
 section {
 	width: 960px;
-	margin: 0 auto;	
+	margin: 0 auto;
 }
 
 section h2 {
@@ -106,6 +106,8 @@ section p {
 	left: 165px;
 }
 
+/* fretboard whole */
+
 .fretboard-whole {
 	position: relative;
 }
@@ -145,98 +147,104 @@ section p {
 	left: 930px;
 }
 
-.c-shape .note1 {
+/* barre chord shapes */
+
+.chord-patterns .c-shape .note1 {
 	top: 80px;
 	left: 43px;
 	height: 88px;
 }
 
-.c-shape .note2 {
+.chord-patterns .c-shape .note2 {
 	top: 98px;
 	left: 85px;
 }
 
-.c-shape .note3 {
+.chord-patterns .c-shape .note3 {
 	top: 125px;
 	left: 126px;
 }
 
-.c-shape .note4 {
+.chord-patterns .c-shape .note4 {
 	top: 139px;
 	left: 160px;
 }
 
-.a-shape .note1 {
+.chord-patterns .a-shape .note1 {
 	top: 80px;
 	left: 41px;
 	height: 73px;
 }
 
-.a-shape .note2 {
+.chord-patterns .a-shape .note2 {
 	left: 131px;
 	top: 98px;
 	height:40px;
 }
 
-.g-shape .note1 {
+.chord-patterns .g-shape .note1 {
 	left: 41px;
 	top: 98px;
 	height: 40px;
 }
 
-.g-shape .note2 {
+.chord-patterns .g-shape .note2 {
 	top: 140px;
 	left: 131px;
 }
 
-.g-shape .note3 {
+.chord-patterns .g-shape .note3 {
 	top: 154px;
 	left: 165px;
 }
 
-.g-shape .note4 {
+.chord-patterns .g-shape .note4 {
 	top: 84px;
 	left: 165px;
 }
 
-.e-shape .note1 {
+.chord-patterns .e-shape .note1 {
 	top: 80px;
 	left: 43px;
 	height: 88px;
 }
 
-.e-shape .note2 {
+.chord-patterns .e-shape .note2 {
 	top: 112px;
 	left: 85px;
 }
 
-.e-shape .note3 {
+.chord-patterns .e-shape .note3 {
 	top: 126px;
 	left: 126px;
 }
 
-.e-shape .note4 {
+.chord-patterns .e-shape .note4 {
 	top: 140px;
 	left: 126px;
 }
 
-.d-shape .note1 {
+.chord-patterns .d-shape .note1 {
 	top: 80px;
 	left: 43px;
 	height: 58px;
 }
 
-.d-shape .note2 {
+.chord-patterns .d-shape .note2 {
 	top: 84px;
 	left: 126px;
 }
 
-.d-shape .note3 {
+.chord-patterns .d-shape .note3 {
 	top: 112px;
 	left: 126px;
 }
 
-.d-shape .note4 {
+.chord-patterns .d-shape .note4 {
 	top: 98px;
 	left: 160px;
 }
+
+/* pentatonic scale shapes */
+
+
