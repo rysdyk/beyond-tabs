@@ -271,6 +271,12 @@ $('.choose-key ul li').click( function(){
 
 })
 
+// click a key by default
+
+$(document).ready( function(){
+	$('ul.keys li:first-child').click();
+})
+
 
 
 // Menu Animation
