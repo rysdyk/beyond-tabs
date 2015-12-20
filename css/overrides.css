@@ -71,6 +71,7 @@ header {
       cursor: pointer; }
       .sidebar ul li.active {
         background: red;
+        border: 1px solid red;
         color: #fff;
         transition: background 300ms ease-out; }
         .sidebar ul li.active:hover {
@@ -113,6 +114,8 @@ header {
   line-height: 70px;
   border: 1px solid #eee;
   font-weight: 300; }
+.result .notes.chords li {
+  border-radius: 0; }
 
 .notes {
   min-height: 80px; }

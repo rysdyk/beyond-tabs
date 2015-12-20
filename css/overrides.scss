@@ -19,30 +19,6 @@ header {
 	position: fixed;
 	z-index: 2;
 
-	// a.shelf {
-	// 	display: none;
-	// 	float: left;
-	// 	width: 50px;
-	// 	position: relative;
-	// 	margin: 6px 30px 0 0;
-	// 	padding: 0;
-
-	// 	ul {
-	// 		position: relative;
-	// 		float: left;
-	// 		width: 50px;
-	// 		list-style: none;
-	// 		padding: 0;
-
-	// 		li {
-	// 			width: 50px;
-	// 			height: 8px;
-	// 			margin-bottom: 6px;
-	// 			background: #fff;
-	// 		}
-	// 	}
-	// }
-
 	nav {
 		float: right;
 
@@ -74,8 +50,8 @@ header {
 	p { text-transform: initial; }
 }
 
-/* choose key styles */
 
+/* choose key styles */
 
 .space-holder {
 	display: none;
@@ -111,6 +87,7 @@ header {
 
 			&.active {
 				background: red;
+				border: 1px solid red;
 				color: #fff;
 				transition: background 300ms ease-out;
 
@@ -172,10 +149,11 @@ header {
 		border: 1px solid #eee;
 		font-weight: 300;
 	}
+
+	.notes.chords li {
+		border-radius: 0;
+	}
 }
-
-
-
 
 .notes { min-height: 80px; }
 
