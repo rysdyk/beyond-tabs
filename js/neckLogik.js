@@ -1,20 +1,68 @@
 // All our data
+(function(){
+  var beyondTabs = {
+		music: ["A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab"],
+		position: [ "root", "2nd", "3rd", "4th", "5th", "6th", "7th", "octave"],
+	  //triad_position: generateIntervals(0, 2, 4), // ["root", "3rd", "5th"],
+	  //maj_pent_pos: generateIntervals(0, 1, 2, 4, 5), // [ "root", "2nd", "3rd", "5th", "6th"],
+	  //min_pent_pos: generateIntervals(0, 2, 3, 4, 6), // [ "root", "3rd", "4th", "5th", "7th"],
+	  maj_chords: ['major', 'minor', 'minor', 'major', 'major', 'minor', 'diminished'],
+	  min_chords: ['minor', 'diminished', 'major', 'minor', 'minor', 'major', 'major'],
 
-var beyondTabs = {};
+	  init: function(){
+      this.cacheDom();
+	  },
 
-beyondTabs.music = ["A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab"];
+	  cacheDom: function(){
+      this.$keys = $('.keys');
+      this.$pos = $('.position');
+      this.$majPent = $('.maj-pent-pos');
+      this.$minPent = $('.min-pent-pos');
+      this.$tri = $('.triad-position');
+      this.$maj = $('.maj-chords');
+      this.$min = $('.min-chords');
+      this.$choose = $('.choose-key');
+      this.$majNote = $('.major-notes');
+	    this.$majorChords = $('.major-chords');
+	    this.$natMin = $('.nat-minor-notes');
+	    this.$harMin = $('.har-minor-notes');
+	    this.$minChords = $('.minor-chords');
+      this.$majPentNotes = $('.major-pent-notes');
+      this.$minPentNotes = $('.minor-pent-notes');
+      this.$majTri = $('.major-triad');
+	    this.$minTri = $('.minor-triad');
+	  },
 
-beyondTabs.position = [ "root", "2nd", "3rd", "4th", "5th", "6th", "7th", "octave"];
+	  render: function(){
+	  	// this needs a lot of work
+	  	var start = [$keys, $pos, $majPent, $minPent, $tri, $maj, $min];
+	  	for (var i in start ) {
+	  		 for (j=0; j<i.length; j++ ) {
+	  		 	 start[i].append("<li>" + beyondTabs.music[i] + "</li>")
+	  		 }
+	  	}
+      // this is for all append stuff I'm doing
+	  },
 
-beyondTabs.triad_position = ["root", "3rd", "5th"];
+	  generateIntervals: function(){
+	  	var result = [];
+	  	for (i=0; i<arguments.length; i++) {
+	  		result.push(beyondTabs.position[arguments[i]]);
+	  	}
+	  	return result;
+	  },
 
-beyondTabs.maj_pent_pos = [ "root", "2nd", "3rd", "5th", "6th"];
+	  generateNotes: function(){
+  		var result = [];
+  		for (i=0; i<arguments.length; i++) {
+  			result.push(beyondTabs.music[arguments[i]]);
+  		}
+  		return result;
+	  }
+	};
 
-beyondTabs.min_pent_pos = [ "root", "3rd", "4th", "5th", "7th"];
-
-beyondTabs.maj_chords = ['major', 'minor', 'minor', 'major', 'major', 'minor', 'diminished'];
-
-beyondTabs.min_chords = ['minor', 'diminished', 'major', 'minor', 'minor', 'major', 'major'];
+	beyondTabs.init();
+})();
 
 // set up the DOM position indicators above and below notes
 
@@ -276,23 +324,3 @@ $('.choose-key ul li').click( function(){
 $(document).ready( function(){
 	$('ul.keys li:first-child').click();
 })
-
-
-
-// Menu Animation
-
-// $(window).scroll( function(){
-// 	if ( $(this).scrollTop() > 290 ){
-//
-// 		if ( $('.choose-key').hasClass('fixed')){
-// 			return;
-// 		}
-// 		else {
-// 			$('.choose-key').hide().addClass('fixed').fadeIn();
-// 			$('.space-holder').show();
-// 		}
-// 	} else {
-// 		$('.choose-key').removeClass('fixed');
-// 		$('.space-holder').hide();
-// 	}
-// })
