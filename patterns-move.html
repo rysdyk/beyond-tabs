@@ -1,0 +1,111 @@
+<!doctype HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>beyondTabs</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cinzel:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/overrides.css" type="text/css">
+    <link rel="stylesheet" href="css/patterns.css" type="text/css">
+    <link rel="stylesheet" href="css/patterns-move.css" type="text/css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/frets.js">
+    </script>
+  </head>
+
+  <body onload="drawFrets();">
+
+    <header class="header col-md-12">
+      <h1>beyondTabs</h1>
+      <nav>
+        <a href="index.html">Keys</a>
+        <a href="patterns.html">Patterns</a>
+      </nav>
+    </header>
+
+    <div id="content" class="patterns">
+      <div class="col-md-12">
+        <nav class="sidebar choose-key" id="nav">
+          <h2>Choose a Key</h2>
+          <ul class="keys">
+            <li>A</li>
+            <li>A#/Bb</li>
+            <li>B</li>
+            <li>C</li>
+            <li>C#/Db</li>
+            <li>D</li>
+            <li>D#/Eb</li>
+            <li>E</li>
+            <li>F</li>
+            <li>F#/Gb</li>
+            <li>G</li>
+            <li>G#/Ab</li>
+          </ul>
+        </nav>
+      </div>
+      <h1>Patterns</h1>
+      <section class="the-five">
+
+        <div class="fretboard-whole">
+          <h2>Whole Fretboard</h2>
+          <canvas class="fretboard-whole-bg" width="960"></canvas>
+          <div class="notes">
+            <div class="note note1 note1a"></div>
+            <div class="note note2 note2a"></div>
+            <div class="note note3 note3a"></div>
+            <div class="note note4 note4a"></div>
+            <div class="note note5 note5a"></div>
+            <div class="note note6 note6a"></div>
+            <div class="note note1"></div>
+            <div class="note note2"></div>
+            <div class="note note3"></div>
+            <div class="note note4"></div>
+            <div class="note note5"></div>
+            <div class="note note6"></div>
+            <div class="note note7"></div>
+            <div class="note note2 note2b"></div>
+          </div>
+        </div>
+        <ul class="fret-num">
+          <li>open</li>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+        </ul>
+      </section> <!-- the fundamental five-->
+    </div>
+
+    <footer>
+      <h1>beyondTabs</h1>
+      <nav>
+        <a href="index.html">Keys</a>
+        <a href="#">Patterns</a>
+      </nav>
+      <p>&copy; 2015</p>
+    </footer>
+
+    <script>
+    $('.keys li').eq(3).addClass('active');
+    $('.keys li').click(function(){
+      var pos = $(this).index();
+      pos -= 3;
+      $('.keys li').filter('.active').removeClass('active');
+      $(this).addClass('active');
+      $('.notes').animate({left: pos * 70 });
+    })
+    </script>
+
+
+  </body>
+</html>
