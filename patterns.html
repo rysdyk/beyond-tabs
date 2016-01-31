@@ -10,7 +10,8 @@
 		<link rel="stylesheet" href="css/patterns.css" type="text/css">
 		<link rel="stylesheet" href="css/patterns-move.css" type="text/css">
 		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<script src="js/frets.js">
+		<script src="js/layout.js"></script>
+		<script src="js/frets.js"></script>
 		</script>
 	</head>
 
@@ -336,7 +337,7 @@
       $('.keys li').filter('.active').removeClass('active');
       $(this).addClass('active');
       $('.notes').animate({left: pos * 70 });
-    })
+    });
     </script>
 
 	</body>
