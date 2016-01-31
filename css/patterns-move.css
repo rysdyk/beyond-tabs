@@ -37,11 +37,6 @@
   left: 1072px;
 }
 
-/*930*/
-/*.fretboard-whole .note7a {
-  left: -30px;
-}*/
-
 .sidebar {
   position: relative;
   width: auto;
@@ -69,3 +64,9 @@
 .fret-num li:first-child {
   width: 50px;
 }
+
+.fretboard .fret-num {
+  margin-left: 14px;
+}
+
+.fretboard .fret-num li { width: 42px; }

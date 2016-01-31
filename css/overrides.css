@@ -47,36 +47,36 @@ header {
   display: none;
   height: 250px; }
 
-.sidebar {
+.choose-key {
   background: #fff;
-  margin-top: 50px;
-  position: fixed;
-  width: 25%; }
-  .sidebar h2 {
+  margin-top: 30px; }
+  .choose-key h2 {
     font-size: 16px;
-    margin: 0 0 10px !important; }
-  .sidebar ul {
+    margin: 0 0 10px !important;
+    text-align: center; }
+  .choose-key ul {
     list-style: none;
     overflow: hidden;
-    padding: 0 30px; }
-    .sidebar ul li {
+    padding: 0;
+    text-align: center; }
+    .choose-key ul li {
       height: 30px;
       font-size: 15px;
       line-height: 28px;
       background-color: #fff;
       border: 1px solid #c3c3c3;
       margin: 0 8px 15px;
-      width: 25%;
-      float: left;
+      width: 50px;
+      display: inline-block;
       cursor: pointer; }
-      .sidebar ul li.active {
+      .choose-key ul li.active {
         background: red;
         border: 1px solid red;
         color: #fff;
         transition: background 300ms ease-out; }
-        .sidebar ul li.active:hover {
+        .choose-key ul li.active:hover {
           background: red; }
-      .sidebar ul li:hover {
+      .choose-key ul li:hover {
         background: #c3c3c3;
         color: #fff;
         transition: background 300ms ease-out; }

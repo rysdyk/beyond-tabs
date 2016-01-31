@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 		<link rel="stylesheet" href="css/overrides.css" type="text/css">
 		<link rel="stylesheet" href="css/patterns.css" type="text/css">
+		<link rel="stylesheet" href="css/patterns-move.css" type="text/css">
 		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script src="js/frets.js">
 		</script>
@@ -23,6 +24,26 @@
 			</nav>
 		</header>
 
+		<div class="col-md-12">
+			<nav class="choose-key" id="nav">
+				<h2>Choose a Key</h2>
+				<ul class="keys">
+					<li>A</li>
+					<li>A#/Bb</li>
+					<li>B</li>
+					<li>C</li>
+					<li>C#/Db</li>
+					<li>D</li>
+					<li>D#/Eb</li>
+					<li>E</li>
+					<li>F</li>
+					<li>F#/Gb</li>
+					<li>G</li>
+					<li>G#/Ab</li>
+				</ul>
+			</nav>
+		</div>
+
 		<div id="content" class="patterns">
 			<h1>Patterns</h1>
 			<section class="the-five">
@@ -36,6 +57,12 @@
 						<canvas class="fretboard-bg" width="185"></canvas>
 						<div class="note note1"></div>
 						<div class="note note2"></div>
+						<ul class="fret-num">
+						  <li>1</li>
+						  <li>2</li>
+						  <li>3</li>
+						  <li>4</li>
+					  </ul>
 					</div>
 
 					<div class="fretboard pos2">
@@ -44,6 +71,12 @@
 						<canvas class="fretboard-bg" width="185"></canvas>
 						<div class="note note1"></div>
 						<div class="note note2"></div>
+						<ul class="fret-num">
+						  <li>1</li>
+						  <li>2</li>
+						  <li>3</li>
+						  <li>4</li>
+					  </ul>
 					</div>
 
 					<div class="fretboard pos3">
@@ -53,6 +86,12 @@
 						<div class="note note1"></div>
 						<div class="note note2"></div>
 						<div class="note note3"></div>
+						<ul class="fret-num">
+						  <li>1</li>
+						  <li>2</li>
+						  <li>3</li>
+						  <li>4</li>
+					  </ul>
 					</div>
 
 					<div class="fretboard pos4">
@@ -62,6 +101,12 @@
 						<div class="note note1"></div>
 						<div class="note note2"></div>
 						<div class="note note3"></div>
+						<ul class="fret-num">
+						  <li>1</li>
+						  <li>2</li>
+						  <li>3</li>
+						  <li>4</li>
+					  </ul>
 					</div>
 
 					<div class="fretboard pos5">
@@ -70,21 +115,53 @@
 						<canvas class="fretboard-bg" width="185"></canvas>
 						<div class="note note1"></div>
 						<div class="note note2"></div>
+						<ul class="fret-num">
+						  <li>1</li>
+						  <li>2</li>
+						  <li>3</li>
+						  <li>4</li>
+					  </ul>
 					</div>
+
 
 				</div>
 
 				<div class="fretboard-whole">
-					<h2>Whole Fretboard</h2>
+					<h2>The Five Shapes Joined:</h2>
 					<canvas class="fretboard-whole-bg" width="960"></canvas>
-					<div class="note note1"></div>
-					<div class="note note2"></div>
-					<div class="note note3"></div>
-					<div class="note note4"></div>
-					<div class="note note5"></div>
-					<div class="note note6"></div>
-					<div class="note note7"></div>
+					<div class="notes">
+						<div class="note note1 note1a"></div>
+						<div class="note note2 note2a"></div>
+						<div class="note note3 note3a"></div>
+						<div class="note note4 note4a"></div>
+						<div class="note note5 note5a"></div>
+						<div class="note note6 note6a"></div>
+						<div class="note note1"></div>
+						<div class="note note2"></div>
+						<div class="note note3"></div>
+						<div class="note note4"></div>
+						<div class="note note5"></div>
+						<div class="note note6"></div>
+						<div class="note note7"></div>
+						<div class="note note2 note2b"></div>
+					</div>
 				</div>
+				<ul class="fret-num">
+				  <li>open</li>
+				  <li>1</li>
+				  <li>2</li>
+				  <li>3</li>
+				  <li>4</li>
+				  <li>5</li>
+				  <li>6</li>
+				  <li>7</li>
+				  <li>8</li>
+				  <li>9</li>
+				  <li>10</li>
+				  <li>11</li>
+				  <li>12</li>
+				  <li>13</li>
+				</ul>
 			</section> <!-- the fundamental five-->
 
 
@@ -99,6 +176,12 @@
 					<div class="note note2"></div>
 					<div class="note note3"></div>
 					<div class="note note4"></div>
+						<ul class="fret-num">
+						  <li>1</li>
+						  <li>2</li>
+						  <li>3</li>
+						  <li>4</li>
+					  </ul>
 				</div>
 
 				<div class="fretboard a-shape">
@@ -107,6 +190,12 @@
 					<canvas class="fretboard-bg" width="185"></canvas>
 					<div class="note note1"></div>
 					<div class="note note2"></div>
+						<ul class="fret-num">
+						  <li>1</li>
+						  <li>2</li>
+						  <li>3</li>
+						  <li>4</li>
+					  </ul>
 				</div>
 
 				<div class="fretboard g-shape">
@@ -117,6 +206,12 @@
 					<div class="note note2"></div>
 					<div class="note note3"></div>
 					<div class="note note4"></div>
+						<ul class="fret-num">
+						  <li>1</li>
+						  <li>2</li>
+						  <li>3</li>
+						  <li>4</li>
+					  </ul>
 				</div>
 
 				<div class="fretboard e-shape">
@@ -127,6 +222,12 @@
 					<div class="note note2"></div>
 					<div class="note note3"></div>
 					<div class="note note4"></div>
+						<ul class="fret-num">
+						  <li>1</li>
+						  <li>2</li>
+						  <li>3</li>
+						  <li>4</li>
+					  </ul>
 				</div>
 
 				<div class="fretboard d-shape">
@@ -137,9 +238,16 @@
 					<div class="note note2"></div>
 					<div class="note note3"></div>
 					<div class="note note4"></div>
+						<ul class="fret-num">
+						  <li>1</li>
+						  <li>2</li>
+						  <li>3</li>
+						  <li>4</li>
+					  </ul>
 				</div>
 			</section> <!-- caged patterns-->
 
+			<!--
 			<section class="pentatonic">
 			  <h2>Pentatonic Scale Patterns -- CAGED System</h2>
 				<p>The five pentatonic scales correspond with the above positions.</p>
@@ -207,6 +315,7 @@
 			<section class="fourth chord patterns">
 
 			</section>
+			-->
 
 		</div>
 
@@ -218,6 +327,17 @@
 			</nav>
 			<p>&copy; 2015</p>
 		</footer>
+
+		<script>
+    $('.keys li').eq(3).addClass('active');
+    $('.keys li').click(function(){
+      var pos = $(this).index();
+      pos -= 3;
+      $('.keys li').filter('.active').removeClass('active');
+      $(this).addClass('active');
+      $('.notes').animate({left: pos * 70 });
+    })
+    </script>
 
 	</body>
 </html>
