@@ -156,7 +156,7 @@ footer {
   padding-top: 3px !important;
   z-index: 10; }
   .fixed li {
-    margin-bottom: 5px; }
+    margin-bottom: 5px !important; }
 
 /* Responsive */
 
