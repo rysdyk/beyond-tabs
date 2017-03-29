@@ -1,3 +1,6 @@
 Made from a dream on the morning of July 30th, 2014.
 
 Started re-writing js in an object literal pattern on November 19, 2015.
+
+to compile css: sass --watch css
+
