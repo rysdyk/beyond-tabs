@@ -47,6 +47,7 @@ header {
 	margin-top: 50px;
 	min-width: 1100px;
 	overflow: hidden;
+	position: relative;
 	z-index: 1;
 
 	p { text-transform: initial; }
@@ -198,10 +199,12 @@ h1 {
 
 .fixed {
 	background: #fff;
+	border-bottom: 1px solid #c3c3c3;
 	position: fixed;
 	top: 0;
 	left: 0;
 	padding-top: 3px !important;
+	width: 100%;
 	z-index: 10;
 
 	li { margin-bottom: 5px !important; }

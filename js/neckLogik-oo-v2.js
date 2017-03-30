@@ -44,6 +44,8 @@
       }
     },
 
+    // render notes loads up all notes for each area, then hides them all, and show notes only relevant notes
+
     showNotes: function(){
       var intervals = [
         [this.$majNote,       [0, 2, 4, 5, 7, 9, 11, 12]],
