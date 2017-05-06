@@ -4,3 +4,6 @@ Started re-writing js in an object literal pattern on November 19, 2015.
 
 to compile css: sass --watch css
 
+= = =
+
+Started converting to vanilla js April 6, 2017.

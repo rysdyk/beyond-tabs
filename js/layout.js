@@ -1,7 +1,7 @@
-$(window).scroll(function(){
-  if ( $(window).scrollTop() > 106) {
-    $('.keys').addClass('fixed');
+window.onscroll = function(){
+  if ( window.pageYOffset > 106) {
+    document.querySelector('.keys').classList.add('fixed');
   } else {
-    $('.keys').removeClass('fixed');
+    document.querySelector('.keys').classList.remove('fixed');
   }
-});
+};

@@ -3,6 +3,8 @@ html, body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+body { margin: 0; }
+
 h1, h2 { font-family: 'Cinzel', 'Open Sans', Tahoma, sans-serif;}
 
 p { margin-top: 10px; }
@@ -200,6 +202,7 @@ h1 {
 .fixed {
 	background: #fff;
 	border-bottom: 1px solid #c3c3c3;
+	margin: 0;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -213,48 +216,3 @@ h1 {
 
 /* Responsive */
 
-@media (max-width: 990px) {
-	// header a.shelf {
-	// 	display: block;
-	// }
-
-	//.col-md-3 { position: static; }
-
-	// .sidebar {
-	// 	display: none;
-	// 	margin: 0;
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	right: 0;
-	// 	z-index: 1000;
-
-//		a {
-//			border-bottom-width: 0;
-//			overflow: hidden;
-//			height: 0;
-//			line-height: 0;
-//			padding: 0 1em;
-//		}
-
-		// &:target {
-		// 	margin-top: 0;
-		// 	padding-top: 50px;
-	// 		display: block;
-	// 		z-index: 2;
-	// 		background: none;
-
-	// 		a {
-	// 			position: absolute;
-	// 			top: 40px;
-	// 			height: 35px;
-	// 			color: #000;
-	// 			left: 0;
-	// 		}
-
-	// 		h2 { display: none; }
-
-	// 		ul { background: #fff; }
-	// 	}
-	// }
-}
