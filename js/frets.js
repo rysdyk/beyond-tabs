@@ -1,5 +1,25 @@
+var keys = document.querySelectorAll('.keys li');
+var keysArray = Array.from(keys);
+
+keys.forEach(function(key){
+  key.addEventListener('click', function(){
+    keys.forEach(function(key) { key.classList.remove('active'); });
+ 	  key.classList.add('active');
+ 	  var pos = keysArray.indexOf(key);
+ 	  console.log(pos);
+ 	  pos -= 3;
+ 	  var notes = document.querySelector('.notes');
+ 	  notes.style.left = pos * 70 + "px";
+	})
+});
+
 function drawFrets(){
+
+	var keys = document.querySelectorAll('.keys li');
+	keys[3].classList.add('active');
+
 	var backgrounds = document.querySelectorAll('.fretboard-bg');
+
 	backgrounds.forEach( function(background){
 		if (background.getContext) {
 			var ctx = background.getContext('2d');
@@ -29,6 +49,7 @@ function drawFrets(){
 	})
 
 	var wholeBackgrounds = document.querySelectorAll('.fretboard-whole-bg');
+
 	wholeBackgrounds.forEach( function(whole){
 		if (whole.getContext) {
 			var ctx = whole.getContext('2d');

@@ -1,6 +1,8 @@
 .notes {
+  left: 0;
   position: absolute;
   top: 20px;
+  transition: 1s;
 }
 
 .fretboard-whole {

@@ -5,19 +5,16 @@
 		<title>beyondTabs</title>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Cinzel:400,700' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+		<link rel="stylesheet" href="lib/normalize.css" type="text/css">
 		<link rel="stylesheet" href="css/overrides.css" type="text/css">
 		<link rel="stylesheet" href="css/patterns.css" type="text/css">
 		<link rel="stylesheet" href="css/patterns-move.css" type="text/css">
-		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script src="js/layout.js"></script>
-		<script src="js/frets.js"></script>
-		</script>
 	</head>
 
 	<body onload="drawFrets();">
 
-		<header class="header col-md-12">
+		<header class="header">
 			<h1>beyondTabs</h1>
 			<nav>
 				<a href="index.html">Keys</a>
@@ -25,27 +22,27 @@
 			</nav>
 		</header>
 
-		<div class="col-md-12">
-			<nav class="choose-key" id="nav">
-				<h2>Choose a Key</h2>
-				<ul class="keys">
-					<li>A</li>
-					<li>A#/Bb</li>
-					<li>B</li>
-					<li>C</li>
-					<li>C#/Db</li>
-					<li>D</li>
-					<li>D#/Eb</li>
-					<li>E</li>
-					<li>F</li>
-					<li>F#/Gb</li>
-					<li>G</li>
-					<li>G#/Ab</li>
-				</ul>
-			</nav>
-		</div>
+		<div id="content" class="container">
 
-		<div id="content" class="patterns">
+		<nav class="choose-key" id="nav">
+			<h2>Choose a Key</h2>
+			<ul class="keys">
+				<li>A</li>
+				<li>A#/Bb</li>
+				<li>B</li>
+				<li>C</li>
+				<li>C#/Db</li>
+				<li>D</li>
+				<li>D#/Eb</li>
+				<li>E</li>
+				<li>F</li>
+				<li>F#/Gb</li>
+				<li>G</li>
+				<li>G#/Ab</li>
+			</ul>
+		</nav>
+
+		<div class="patterns">
 			<h1>Patterns</h1>
 			<section class="the-five">
 				<h2>The Fundamental Five Shapes</h2>
@@ -320,6 +317,8 @@
 
 		</div>
 
+		</div>
+
 		<footer>
 			<h1>beyondTabs</h1>
 			<nav>
@@ -329,16 +328,7 @@
 			<p>&copy; 2017</p>
 		</footer>
 
-		<script>
-    $('.keys li').eq(3).addClass('active');
-    $('.keys li').click(function(){
-      var pos = $(this).index();
-      pos -= 3;
-      $('.keys li').filter('.active').removeClass('active');
-      $(this).addClass('active');
-      $('.notes').animate({left: pos * 70 });
-    });
-    </script>
+    <script src="js/frets.js"></script>
 
 	</body>
 </html>
