@@ -5,18 +5,14 @@
     init: function(){
       this.cacheDom();
       this.renderNotes(3);
-      this.domKey[3].classList.add('active');
+      this.$keys[3].classList.add('active');
       this.showNotes();
       this.events();
     },
 
     cacheDom: function(){
-      this.domKeyAll = document.querySelectorAll('.keys li');
-      this.domKey = Array.from(this.domKeyAll);
-
-      this.domNotesAll = document.querySelectorAll('.notes');
-      this.domNotes = Array.from(this.domNotesAll);
-
+      this.$keys = document.querySelectorAll('.keys li');
+      this.$notes = document.querySelectorAll('.notes');
       this.$majNote = document.querySelectorAll('.major-notes');
       this.$majChords = document.querySelectorAll('.major-chords');
       this.$natMin = document.querySelectorAll('.nat-minor-notes');
@@ -29,7 +25,7 @@
     },
 
     events: function(){
-      this.domKey.forEach( function(key){
+      this.$keys.forEach( function(key){
         key.addEventListener('click', function(){
           beyondTabs.changeKey(this);
         });
@@ -38,7 +34,7 @@
 
     renderNotes: function(x){
       if ( x !== undefined) {
-        this.domNotes.forEach( function(ul){
+        this.$notes.forEach( function(ul){
           for ( i=0; i <= beyondTabs.notes.length; i++ ) {
             var li = document.createElement("li");
             li.appendChild(document.createTextNode(beyondTabs.notes[(x + i) % 12]));
@@ -47,7 +43,7 @@
           }
         });
       } else {
-        this.domNotes.forEach( function(ul){
+        this.$notes.forEach( function(ul){
           for ( i=0; i <= beyondTabs.notes.length; i++ ) {
             var li = document.createElement("li");
             li.appendChild(document.createTextNode(beyondTabs.notes[i % 12]));
@@ -82,16 +78,20 @@
     },
 
     changeKey: function(x){
-      this.domKey.forEach(function(key){
+      this.$keys.forEach(function(key){
         key.classList.remove('active');
       });
+
       x.classList.add('active');
-      this.domNotes.forEach( function(ul){
+
+      this.$notes.forEach( function(ul){
         while (ul.firstChild) {
           ul.removeChild(ul.firstChild);
         }
       });
-      var num = this.domKey.indexOf(x);
+
+      var keys = Array.from(this.$keys);
+      var num = keys.indexOf(x);
       beyondTabs.renderNotes(num);
       beyondTabs.showNotes();
     }
