@@ -1,11 +1,10 @@
 function drawFrets(){
-	$('.fretboard-bg').each( function(){
-		if (this.getContext)
-		{
-			var ctx = this.getContext('2d');
-			
-			for (i=0; i<4; i++)
-			{
+	var backgrounds = document.querySelectorAll('.fretboard-bg');
+	backgrounds.forEach( function(background){
+		if (background.getContext) {
+			var ctx = background.getContext('2d');
+
+			for (i=0; i<4; i++) {
 				ctx.lineWidth = 2;
 				ctx.beginPath();
 				ctx.moveTo(15+i*44, 0);
@@ -13,9 +12,8 @@ function drawFrets(){
 				ctx.strokeStyle = '#c3c3c3';
 				ctx.stroke();
 			}
-		
-			for (i=0; i<6; i++)
-			{
+
+			for (i=0; i<6; i++) {
 				ctx.lineWidth = 1 + i/2;
 				ctx.beginPath();
 				ctx.moveTo(5, 5+i*14);
@@ -24,19 +22,18 @@ function drawFrets(){
 				ctx.stroke();
 			}
 		}
-		else
-		{
+
+		else {
 			alert("Your browser is needs to be updated. Please visit BrowseHappy.com to get a modern, safe browser.")
 		}
 	})
-	
-	$('.fretboard-whole-bg').each( function(){
-		if (this.getContext)
-		{
-			var ctx = this.getContext('2d');
-			
-			for (i=0; i<13; i++)
-			{
+
+	var wholeBackgrounds = document.querySelectorAll('.fretboard-whole-bg');
+	wholeBackgrounds.forEach( function(whole){
+		if (whole.getContext) {
+			var ctx = whole.getContext('2d');
+
+			for (i=0; i<13; i++) {
 				ctx.lineWidth = 2;
 				ctx.beginPath();
 				ctx.moveTo(50+i*70, 0);
@@ -44,9 +41,8 @@ function drawFrets(){
 				ctx.strokeStyle = '#c3c3c3';
 				ctx.stroke();
 			}
-		
-			for (i=0; i<6; i++)
-			{
+
+			for (i=0; i<6; i++) {
 				ctx.lineWidth = 1 + i/2;
 				ctx.beginPath();
 				ctx.moveTo(5, 5+i*14);
@@ -55,10 +51,8 @@ function drawFrets(){
 				ctx.stroke();
 			}
 		}
-		else
-		{
+		else {
 			alert("Your browser is needs to be updated. Please visit BrowseHappy.com to get a modern, safe browser.")
 		}
 	})
-	
 }
