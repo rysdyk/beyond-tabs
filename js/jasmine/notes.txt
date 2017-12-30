@@ -1,0 +1,61 @@
+Copied from js/jasmine/fizzbuzz project.
+
+1) Get stand-alone jasmine file from internet (use npm, gem, etc, for real projects).
+    https://github.com/jasmine/jasmine/releases
+2) open zip file in your project (right in the js folder, if it exists).
+3) rename to something like 'jasmine' or 'test'
+4) add you relevant files to SpecRunner.html
+  - also add jquery cdn if necessary
+  - use your actual js, or create a src js file if you need to escape closure or test only part of it.
+5) open SpecRunner.html in your browser
+
+
+Matchers
+
+.toBe()   // exact compare ===
+.toEqual()  // more general compare
+.toBeUndefined()
+.toBeDefined()
+.toMatch( /regex/ )
+.toBeNull( /regex/ )
+.toBeTruthy()
+.toBeFalsy()
+.toBeLessThan(number)
+.toBeGreaterThan(number)
+.toContain(item)  // look for item in array
+.toThrow(e)    // to threw error
+.not    // of these can have .not in front of them to "reverse" them:  .not.toEqual()
+
+
+There is also Jquery Jasmine!
+https://github.com/velesin/jasmine-jquery
+
+Matchers
+
+.toBe( $('.class') )  // matches jquery selector
+.toBeChecked() // radio and checkboxes
+.toBeHidden()   // display:none
+.toBeVisible()
+.toBeSelected   // for elements with selected attribute
+.toHaveCss( 'color', 'red' )  // test if css exists just like jquery css function
+.toHaveAttr( 'name', 'value' )
+.toContain( $('.class') ) // check if jquery selector is a child
+.toHaveValue(value)   // for elements with value attribute
+.toHaveText('text')
+.toHaveId('id')
+.toHaveClass('class')
+.toHaveHtml('html')
+.toHandle('event')  // check if element listens for event
+.toBeFocused()   // check if element is focused
+
+Full list here: https://github.com/velesin/jasmine-jquery
+
+
+
+
+
+
+
+
+
+
