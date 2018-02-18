@@ -1,250 +1,172 @@
 .patterns h1 {
-	text-align: center;
-	display: block;
-	margin: 40px 0;
-}
+  text-align: center;
+  display: block;
+  margin: 40px 0; }
 
 .fretboard-chunks {
-	position: relative;
-	overflow: hidden;
-}
+  position: relative;
+  overflow: hidden; }
 
 .fretboard {
-	position: relative;
-	float: left;
-	width: 185px;
-	margin: 0 3px;
-}
-
-.fretboard h2 {
-	text-align: center;
-	font-size: 18px;
-	line-height: 24px;
-}
+  position: relative;
+  float: left;
+  width: 185px;
+  margin: 0 3px; }
+  .fretboard h2 {
+    text-align: center;
+    font-size: 18px;
+    line-height: 24px; }
 
 section {
-	width: 960px;
-	margin: 0 auto;
-}
-
-section h2 {
-	text-align: center;
-	font-size: 18px;
-}
-
-section p {
-	text-align: center;
-	font-size: 14px;
-}
+  width: 960px;
+  margin: 0 auto; }
+  section h2 {
+    text-align: center;
+    font-size: 18px; }
+  section p {
+    text-align: center;
+    font-size: 14px; }
 
 .note {
-	width: 10px;
-	height: 10px;
-	background: red;
-	border-radius: 10px;
-	position: absolute;
-	top: 0;
-}
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 10px;
+  position: absolute;
+  top: 0; }
 
 .pos1 .note1 {
-	top: 98px;
-	left: 32px;
-}
-
+  top: 98px;
+  left: 32px; }
 .pos1 .note2 {
-	top: 140px;
-	left: 123px;
-}
+  top: 140px;
+  left: 123px; }
 
 .pos2 .note1 {
-	top: 140px;
-	left: 32px;
-}
-
+  top: 140px;
+  left: 32px; }
 .pos2 .note2 {
-	top: 112px;
-	left: 125px;
-}
+  top: 112px;
+  left: 125px; }
 
 .pos3 .note1 {
-	top: 112px;
-	left: 32px;
-}
-
+  top: 112px;
+  left: 32px; }
 .pos3 .note2 {
-	top: 154px;
-	left: 160px;
-}
-
+  top: 154px;
+  left: 160px; }
 .pos3 .note3 {
-	top: 84px;
-	left: 160px;
-}
+  top: 84px;
+  left: 160px; }
 
 .pos4 .note1 {
-	top: 154px;
-	left: 32px;
-}
-
+  top: 154px;
+  left: 32px; }
 .pos4 .note2 {
-	top: 84px;
-	left: 32px;
-}
-
+  top: 84px;
+  left: 32px; }
 .pos4 .note3 {
-	top: 126px;
-	left: 130px;
-}
+  top: 126px;
+  left: 130px; }
 
 .pos5 .note1 {
-	top: 126px;
-	left: 32px;
-}
-
+  top: 126px;
+  left: 32px; }
 .pos5 .note2 {
-	top: 98px;
-	left: 165px;
-}
+  top: 98px;
+  left: 165px; }
 
 /* fretboard whole */
-
 .fretboard-whole {
-	position: relative;
-}
-
-.fretboard-whole .note1 {
-	top: 43px;
-	left: 95px;
-}
-
-.fretboard-whole .note2 {
-	top: 85px;
-	left: 235px;
-}
-
-.fretboard-whole .note3 {
-	top: 57px;
-	left: 375px;
-}
-
-.fretboard-whole .note4 {
-	top: 29px;
-	left: 585px;
-}
-
-.fretboard-whole .note5 {
-	top: 99px;
-	left: 585px;
-}
-
-.fretboard-whole .note6 {
-	top: 71px;
-	left: 725px;
-}
-
-.fretboard-whole .note7 {
-	top: 43px;
-	left: 930px;
-}
+  position: relative; }
+  .fretboard-whole .note1 {
+    top: 43px;
+    left: 95px; }
+  .fretboard-whole .note2 {
+    top: 85px;
+    left: 235px; }
+  .fretboard-whole .note3 {
+    top: 57px;
+    left: 375px; }
+  .fretboard-whole .note4 {
+    top: 29px;
+    left: 585px; }
+  .fretboard-whole .note5 {
+    top: 99px;
+    left: 585px; }
+  .fretboard-whole .note6 {
+    top: 71px;
+    left: 725px; }
+  .fretboard-whole .note7 {
+    top: 43px;
+    left: 930px; }
 
 /* barre chord shapes */
-
 .chord-patterns .c-shape .note1 {
-	top: 80px;
-	left: 43px;
-	height: 88px;
-}
-
+  top: 80px;
+  left: 43px;
+  height: 88px; }
 .chord-patterns .c-shape .note2 {
-	top: 98px;
-	left: 85px;
-}
-
+  top: 98px;
+  left: 85px; }
 .chord-patterns .c-shape .note3 {
-	top: 125px;
-	left: 126px;
-}
-
+  top: 125px;
+  left: 126px; }
 .chord-patterns .c-shape .note4 {
-	top: 139px;
-	left: 160px;
-}
+  top: 139px;
+  left: 160px; }
 
 .chord-patterns .a-shape .note1 {
-	top: 80px;
-	left: 41px;
-	height: 73px;
-}
-
+  top: 80px;
+  left: 41px;
+  height: 73px; }
 .chord-patterns .a-shape .note2 {
-	left: 131px;
-	top: 98px;
-	height:40px;
-}
+  left: 131px;
+  top: 98px;
+  height: 40px; }
 
 .chord-patterns .g-shape .note1 {
-	left: 41px;
-	top: 98px;
-	height: 40px;
-}
-
+  left: 41px;
+  top: 98px;
+  height: 40px; }
 .chord-patterns .g-shape .note2 {
-	top: 140px;
-	left: 131px;
-}
-
+  top: 140px;
+  left: 131px; }
 .chord-patterns .g-shape .note3 {
-	top: 154px;
-	left: 165px;
-}
-
+  top: 154px;
+  left: 165px; }
 .chord-patterns .g-shape .note4 {
-	top: 84px;
-	left: 165px;
-}
+  top: 84px;
+  left: 165px; }
 
 .chord-patterns .e-shape .note1 {
-	top: 80px;
-	left: 43px;
-	height: 88px;
-}
-
+  top: 80px;
+  left: 43px;
+  height: 88px; }
 .chord-patterns .e-shape .note2 {
-	top: 112px;
-	left: 85px;
-}
-
+  top: 112px;
+  left: 85px; }
 .chord-patterns .e-shape .note3 {
-	top: 126px;
-	left: 126px;
-}
-
+  top: 126px;
+  left: 126px; }
 .chord-patterns .e-shape .note4 {
-	top: 140px;
-	left: 126px;
-}
+  top: 140px;
+  left: 126px; }
 
 .chord-patterns .d-shape .note1 {
-	top: 80px;
-	left: 43px;
-	height: 58px;
-}
-
+  top: 80px;
+  left: 43px;
+  height: 58px; }
 .chord-patterns .d-shape .note2 {
-	top: 84px;
-	left: 126px;
-}
-
+  top: 84px;
+  left: 126px; }
 .chord-patterns .d-shape .note3 {
-	top: 112px;
-	left: 126px;
-}
-
+  top: 112px;
+  left: 126px; }
 .chord-patterns .d-shape .note4 {
-	top: 98px;
-	left: 160px;
-}
+  top: 98px;
+  left: 160px; }
 
 /* pentatonic scale shapes */
 
-
+/*# sourceMappingURL=patterns.css.map */
