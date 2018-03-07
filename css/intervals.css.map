@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AACE,gBAAQ;EACN,MAAM,EAAE,cAAc;EACtB,SAAS,EAAE,KAAK;;AAIpB,QAAS;EACP,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,KAAK",
+"mappings": "AACE,gBAAQ;EACN,MAAM,EAAE,cAAc;EACtB,SAAS,EAAE,KAAK",
 "sources": ["intervals.scss"],
 "names": [],
 "file": "intervals.css"

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,gBAAQ;EACN,MAAM,EAAE,MAAM;EACd,SAAS,EAAE,KAAK;EAEhB,yBAAS;IACP,MAAM,EAAE,KAAK;IACb,KAAK,EAAE,KAAK",
+"sources": ["tabs-to-notes.scss"],
+"names": [],
+"file": "tabs-to-notes.css"
+}
